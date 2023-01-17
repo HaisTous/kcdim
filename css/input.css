@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /*Общие стили*/
+    body {
+        @apply antialiased bg-gray-200
+        dark:bg-slate-800;
+    }
+
+    /*Python-код*/
+    code {
+        @apply font-semibold;
+    }
+    pre {
+        @apply text-gray-900 rounded-lg bg-gray-200 my-4 px-2
+        dark:text-gray-100 dark:bg-slate-800 pb-4;
+    }
+    .line-number {
+        @apply inline-block w-12 text-gray-500;
+    }
+    .number {
+        @apply text-orange-600
+        dark:text-orange-400;
+    }
+    .string {
+        @apply text-green-600
+        dark:text-green-400;
+    }
+    .function {
+        @apply text-blue-600
+        dark:text-blue-400;
+    }
+    .statement {
+        @apply text-fuchsia-600
+        dark:text-fuchsia-400;
+    }
+
+    /*Шапка*/
+    header {
+        @apply sticky top-0 py-2 mb-2 border-b-2 z-50 border-gray-200 text-gray-700 bg-gray-100
+        dark:text-gray-300 dark:bg-slate-900 dark:border-slate-700;
+    }
+
+    .header {
+        @apply flex justify-between items-center flex-wrap mx-auto max-w-screen-xl px-2;
+    }
+
+    /*Логотип*/
+    .logo {
+        @apply flex items-center text-sm font-bold;
+    }
+    .logo img {
+        @apply h-10 mr-3;
+    }
+
+    /*Меню*/
+    .menu {
+        @apply flex;
+    }
+    .menu ul {
+        @apply flex flex-row font-medium md:space-x-6 lg:space-x-10;
+    }
+    .menu a {
+        @apply hover:text-red-500;
+    }
+
+    /*Главная*/
+    main {
+        @apply w-full rounded-lg px-6 py-3 bg-gray-100 text-gray-700
+        dark:bg-slate-900 dark:text-gray-300;
+    }
+
+    /*Боковая панель*/
+    aside {
+        @apply flex-[0_0_18.75rem];
+    }
+
+    /*Кнопка без фона*/
+    .btn-no-bg {
+        @apply hover:bg-red-300 rounded-lg p-2.5
+        dark:hover:bg-red-500 ;
+    }
+
+    /*Контейнер*/
+    .container {
+        @apply flex flex-row items-start mx-auto max-w-screen-xl gap-2 px-2;
+    }
+
+    /*Заголовок темы*/
+    h2.title {
+        @apply uppercase text-lg font-bold text-gray-900 mb-4
+        dark:text-gray-100;
+    }
+
+    h3.subtitle {
+        @apply text-base font-bold text-gray-900 my-4
+        dark:text-gray-100;
+    }
+
+    /*Нумерованный список*/
+    ol {
+        @apply list-decimal list-inside space-y-1 text-gray-700
+        dark:text-gray-300;
+    }
+    ol a:hover {
+        @apply hover:underline;
+    }
+}
