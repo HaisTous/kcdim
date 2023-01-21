@@ -90,7 +90,7 @@
 
     /*Блочная ссылка*/
     .block-link {
-        @apply inline-flex items-center justify-center p-5 text-base font-medium rounded-lg my-4
+        @apply inline-flex items-center justify-center p-3 text-base font-medium rounded-lg my-4
         text-gray-100 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl;
     }
 
@@ -117,5 +117,43 @@
     }
     ol a:hover {
         @apply hover:underline;
+    }
+
+    /*Всплывающая подсказка*/
+    .tooltip {
+        @apply relative inline-block;
+    }
+    .tooltip .tooltiptext {
+        @apply invisible bg-gray-900 text-gray-100 text-center px-4 py-2 rounded-md
+        absolute z-auto opacity-0 transition-opacity duration-700
+        dark:bg-gray-100 dark:text-gray-900;
+    }
+
+    /*Таблица*/
+    .stripped-table {
+        @apply relative overflow-x-auto rounded-lg;
+    }
+    .stripped-table table {
+        @apply w-full text-sm text-center text-gray-700
+        dark:text-gray-300;
+    }
+    .stripped-table thead {
+        @apply text-xs uppercase text-gray-900 bg-gray-300
+        dark:text-gray-100 dark:bg-gray-800;
+    }
+    .stripped-table th, .stripped-table td {
+        @apply px-4 py-2;
+    }
+    .stripped-table .name {
+        @apply font-medium text-gray-900 whitespace-nowrap text-left
+        dark:text-gray-100;
+    }
+    tr.light-row {
+        @apply border-b bg-gray-200
+        dark:bg-slate-800 dark:border-gray-700;
+    }
+    tr.dark-row {
+        @apply bg-white bg-gray-100
+        dark:bg-slate-700 dark:border-slate-600;
     }
 }
