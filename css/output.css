@@ -549,6 +549,11 @@ video {
 
 /*Общие стили*/
 
+html {
+  scroll-padding-top: 4.5rem;
+  scroll-behavior: smooth;
+}
+
 body {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -570,6 +575,7 @@ code {
 pre {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  overflow-x: auto;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -725,6 +731,7 @@ header {
 
 main {
   width: 100%;
+  overflow-x: auto;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -745,8 +752,72 @@ main {
 
 /*Боковая панель*/
 
-aside {
-  flex: 0 0 18.75rem;
+aside.sidebar {
+  position: sticky;
+  top: 4rem;
+  display: none;
+  width: 20rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.dark aside.sidebar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  aside.sidebar {
+    display: block;
+  }
+}
+
+aside.sidebar>nav>ul>li {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+aside.sidebar>nav>ul>li>a {
+  border-left-width: 4px;
+  border-color: transparent;
+  padding-left: 1rem;
+}
+
+aside.sidebar>nav>ul>li>a:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(190 18 60 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(190 18 60 / var(--tw-text-opacity));
+}
+
+.dark aside.sidebar>nav>ul>li>a:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 113 133 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity));
+}
+
+aside.sidebar>nav>ul>li.sidebar-nav__active>a {
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(190 18 60 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(190 18 60 / var(--tw-text-opacity));
+  transition-property: none;
+  transition-duration: 200ms;
+}
+
+.dark aside.sidebar>nav>ul>li.sidebar-nav__active>a {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 113 133 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity));
 }
 
 /*Кнопка без фона*/
@@ -1026,8 +1097,8 @@ tr.dark-row {
   width: 1.25rem;
 }
 
-.w-20 {
-  width: 5rem;
+.w-32 {
+  width: 8rem;
 }
 
 .w-full {
@@ -1036,10 +1107,6 @@ tr.dark-row {
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .max-w-lg {
@@ -1071,17 +1138,35 @@ tr.dark-row {
   line-height: 1rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-semibold {
   font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .italic {
   font-style: italic;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1104,4 +1189,9 @@ tr.dark-row {
 .dark .dark\:text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }

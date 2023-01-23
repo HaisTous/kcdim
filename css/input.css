@@ -5,6 +5,10 @@
 @layer components {
 
     /*Общие стили*/
+    html {
+        @apply scroll-smooth scroll-pt-[4.5rem];
+    }
+
     body {
         @apply antialiased bg-gray-200
         dark:bg-slate-800;
@@ -15,7 +19,7 @@
         @apply font-semibold;
     }
     pre {
-        @apply text-gray-900 rounded-lg bg-gray-200 my-4 px-2
+        @apply text-gray-900 rounded-lg bg-gray-200 my-4 px-2 overflow-x-auto
         dark:text-gray-100 dark:bg-slate-800 pb-4;
     }
     .line-number {
@@ -73,13 +77,28 @@
 
     /*Главная*/
     main {
-        @apply w-full rounded-lg px-6 py-3 bg-gray-100 text-gray-700
+        @apply w-full overflow-x-auto rounded-lg px-6 py-3 bg-gray-100 text-gray-700
         dark:bg-slate-900 dark:text-gray-300;
     }
 
     /*Боковая панель*/
-    aside {
-        @apply flex-[0_0_18.75rem];
+    aside.sidebar {
+        @apply w-80 flex-shrink-0 hidden rounded-lg px-6 py-3 sticky top-16 md:block
+        dark:bg-slate-900 dark:text-gray-300;
+    }
+    aside.sidebar>nav>ul>li {
+        @apply py-1;
+    }
+    aside.sidebar>nav>ul>li>a {
+        @apply pl-4 border-l-4 border-transparent;
+    }
+    aside.sidebar>nav>ul>li>a:hover {
+        @apply border-rose-700 text-rose-700
+        dark:border-rose-400 dark:text-rose-400;
+    }
+    aside.sidebar>nav>ul>li.sidebar-nav__active>a {
+        @apply border-l-4 border-rose-700 text-rose-700 transition-none duration-200
+        dark:border-rose-400 dark:text-rose-400;
     }
 
     /*Кнопка без фона*/

@@ -8,6 +8,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="../img/logo.svg">
   <link rel="stylesheet" href="../css/output.css">
   <script defer src="../js/color-theme.js"></script>
+  <script defer src="../js/nav.js"></script>
   <title>Арифметические операции</title>
 </head>
 <body>
@@ -66,7 +67,7 @@
 </header>
 <div class="container">
   <main>
-    <h2 class="title">Арифметические операции</h2>
+    <h2 class="title section" data-section="operations" id="operations">Арифметические операции</h2>
     <p>В языке <span class="font-semibold italic">Python</span> есть операторы, которые выглядят как специальные
       символы, предоставляющие вычисления, такие как сложение, умножение и др.
     </p>
@@ -125,11 +126,11 @@
           <td class="whitespace-nowrap">465 % 5 = 0</td>
         </tr>
         <tr class="dark-row">
-          <td></td>
+          <td><img class="w-32 mx-auto h-auto rounded-lg" src="../img/power.webp" alt="Возведение в степень"></td>
           <td>**</td>
           <td>Возведение в степень</td>
           <td>1</td>
-          <td class="whitespace-nowrap">3 ** 4 = 81</td>
+          <td class="whitespace-nowrap">5 ** 3 = 125</td>
         </tr>
         </tbody>
       </table>
@@ -149,7 +150,64 @@
 <span class="line-number">2</span>b = <span class="function">int</span>(<span class="function">input</span>())
 <span class="line-number">3</span>c = a + b
 <span class="line-number">4</span><span class="function">print</span>(<span class="string">f"</span><span class="function">{</span>c<span class="function">}</span><span class="string">"</span>)</code></pre>
+    <h2 class="title section" data-section="numbers" id="numbers">Обработка цифр числа</h2>
+    <p>Одной из часто используемых задач является нахождение цифр числа. Для того, чтобы найти все цифры
+      <span class="underline">целого положительного числа</span>, нужно использовать две арифметические
+      операции.
+    </p>
+    <ol class="my-4">
+      <li>
+        <span class="font-semibold">Нахождение последней цифры числа.</span>
+        <p>Для нахождения последней цифры числа нужно исходное число поделить на 10 и найти остаток от деления:</p>
+    <pre><code>
+<span class="line-number">>>></span>1 % 10
+<span class="line-number">>>></span>1
+<span class="line-number">>>></span>23 % 10
+<span class="line-number">>>></span>3
+<span class="line-number">>>></span>123456 % 10
+<span class="line-number">>>></span>6</code></pre>
+      </li>
+      <li>
+        <span class="font-semibold">Удаление цифр числа справа.</span>
+        <p>Для удаления определенного количества цифр с конца числа нужно использовать целочисленное деление:</p>
+    <pre><code>
+<span class="line-number">>>></span>23 // 10
+<span class="line-number">>>></span>2
+<span class="line-number">>>></span>123456 // 100
+<span class="line-number">>>></span>1234
+<span class="line-number">>>></span>123456 // 10000
+<span class="line-number">>>></span>12</code></pre>
+        <p>Обратите внимание, что, например, если мы хотим удалить в числе <span class="underline">4</span> цифры
+          справа, то нам нужно исходное число поделить на 1<span class="underline">0000</span> (простыми словами:
+          <span class="underline">количество нулей совпадает с количеством цифр, которые мы хотим удалить</span>).</p>
+      </li>
+    </ol>
+    <p>Комбинируя эти операции, можно находить любую цифру любого целого положительного числа:</p>
+    <pre><code>
+<span class="line-number">>>></span>1234 % 10
+<span class="line-number">>>></span>4
+<span class="line-number">>>></span>1234 // 10 % 10
+<span class="line-number">>>></span>3
+<span class="line-number">>>></span>1234 // 100 % 10
+<span class="line-number">>>></span>2
+<span class="line-number">>>></span>1234 // 1000
+<span class="line-number">>>></span>1</code></pre>
   </main>
+  <aside class="sidebar">
+    <h3 class="text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-gray-100">
+      На этой странице
+    </h3>
+    <nav class="sidebar-nav">
+      <ul>
+        <li data-section="operations" class="sidebar-nav__li sidebar-nav__active">
+          <a href="#operations">Арифметические операции</a>
+        </li>
+        <li data-section="numbers" class="sidebar-nav__li">
+          <a href="#numbers">Обработка цифр числа</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 </div>
 </body>
 </html>
