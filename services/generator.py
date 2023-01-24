@@ -73,7 +73,7 @@ def save_data(data: list[str], mode: str) -> None:
         if mode == "out":
             ext = ".a"
         else:
-            ext = ".a"
+            ext = ""
 
         file_data = open(f"tests/{name}{ext}", "w")
         file_data.write(data[i])
