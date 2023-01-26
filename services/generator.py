@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from random import randint
+from random import randint, uniform
 from shutil import rmtree
 from zipfile import ZipFile
 
