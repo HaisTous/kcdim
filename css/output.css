@@ -672,33 +672,12 @@ header {
   margin-right: auto;
   display: flex;
   max-width: 1280px;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
-
-.header > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-.header {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .header {
-    flex-direction: row;
-  }
-
-  .header > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
 }
 
 /*Логотип*/
@@ -714,6 +693,16 @@ header {
 .logo img {
   margin-right: 0.75rem;
   height: 2.5rem;
+}
+
+.logo__header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .logo__header {
+    display: block;
+  }
 }
 
 /*Меню*/
@@ -1098,6 +1087,18 @@ tr.dark-row {
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
+.order-3 {
+  order: 3;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-1 {
+  order: 1;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1237,4 +1238,14 @@ tr.dark-row {
 .dark .dark\:text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:order-3 {
+    order: 3;
+  }
 }
