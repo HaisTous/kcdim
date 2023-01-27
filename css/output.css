@@ -863,6 +863,26 @@ aside.sidebar>nav>ul>li.sidebar-nav__active>a {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
 
+.disabled-block-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #6b7280;
+  --tw-gradient-to: rgb(107 114 128 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #a3a3a3;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
 /*Контейнер*/
 
 .container {
