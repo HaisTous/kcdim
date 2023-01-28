@@ -1061,26 +1061,26 @@ ol a:hover:hover {
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
-tr.light-row {
+.stripped-table tbody tr:nth-child(even) {
   border-bottom-width: 1px;
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.dark tr.light-row {
+.dark .stripped-table tbody tr:nth-child(even) {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-tr.dark-row {
+.stripped-table tbody tr:nth-child(odd) {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.dark tr.dark-row {
+.dark .stripped-table tbody tr:nth-child(odd) {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
