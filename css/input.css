@@ -86,7 +86,7 @@
 
     /*Боковая панель*/
     aside.sidebar {
-        @apply w-80 flex-shrink-0 hidden rounded-lg px-6 py-3 sticky top-16 md:block
+        @apply w-80 flex-shrink-0 hidden rounded-lg px-6 py-3 sticky top-16 md:block bg-gray-100 text-gray-700
         dark:bg-slate-900 dark:text-gray-300;
     }
     aside.sidebar>nav>ul>li {
@@ -150,9 +150,9 @@
         @apply relative inline-block;
     }
     .tooltip .tooltiptext {
-        @apply invisible bg-gray-900 text-gray-100 text-center px-4 py-2 rounded-md right-[105%] top-[-5px]
+        @apply invisible bg-gray-100 text-gray-900 text-center px-4 py-2 rounded-md right-[105%] top-[-5px]
         absolute z-auto opacity-0 transition-opacity duration-700
-        dark:bg-gray-100 dark:text-gray-900;
+        dark:bg-gray-900 dark:text-gray-100;
     }
 
     /*Таблица*/
