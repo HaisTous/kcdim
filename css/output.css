@@ -978,6 +978,8 @@ ol a:hover:hover {
 .tooltip .tooltiptext {
   visibility: hidden;
   position: absolute;
+  right: 105%;
+  top: -5px;
   z-index: auto;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;

@@ -150,7 +150,7 @@
         @apply relative inline-block;
     }
     .tooltip .tooltiptext {
-        @apply invisible bg-gray-900 text-gray-100 text-center px-4 py-2 rounded-md
+        @apply invisible bg-gray-900 text-gray-100 text-center px-4 py-2 rounded-md right-[105%] top-[-5px]
         absolute z-auto opacity-0 transition-opacity duration-700
         dark:bg-gray-100 dark:text-gray-900;
     }
