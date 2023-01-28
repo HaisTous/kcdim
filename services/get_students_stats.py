@@ -1,19 +1,22 @@
 from csv import DictReader
-
+from datetime import datetime
 
 CONTESTS = [
     {
         'id': [45316],
         'name': 'Вывод данных',
+        'href': 'topics/data-output.html',
     },
     {
         'id': [45344],
         'name': 'Ввод данных',
+        'href': 'topics/data-input.html',
     },
     {
         'id': [45720],
         'name': 'Арифметические операции',
-    }
+        'href': 'topics/arithmetic.html',
+    },
 ]
 
 
@@ -30,7 +33,6 @@ def get_students(contests: list[dict]) -> dict:
             try:
                 with open(filename, 'r', encoding='utf8') as csvfile:
                     reader = DictReader(csvfile)
-                    print(type(reader))
                     for row in reader:
                         name = row['user_name']
                         students |= {name: ['0'] * contests_counts}
@@ -63,14 +65,30 @@ def update_results(students: dict, contests: list) -> dict:
 def generate_html(students: dict) -> str:
     """Генерация html-файла со списком учащихся"""
 
-    html = '<tbody>\n'
+    current_datetime = datetime.now()
+    date = str(current_datetime)[:16]
+
+    html = f'<main>\n<h2 class="title">Список учащихся</h2>\n' \
+           f'<p class="updated_date">Последнее обновление: {date}</p>\n' \
+           f'<div class="stripped-table">\n' \
+           f'<table>\n<thead>\n<tr>\n<th scope="col">#</th>\n' \
+           f'<th scope="col" class="text-left">Учащийся</th>\n' \
+
+    for number, contest in enumerate(CONTESTS):
+        html += f'<th scope="col">\n' \
+                f'<a href="{contest["href"]}" class="tooltip group">{number + 1}\n' \
+                f'<span class="tooltiptext group-hover:visible group-hover:opacity-100">{contest["name"]}</span>\n' \
+                f'</a>\n</th>\n'
+
+    html += f'<th scope="col">Всего</th>\n</tr>\n</thead>\n<tbody>'
+
     for number, student in enumerate(students):
         html += f'<tr>\n<td>{number + 1}</td>\n' \
                 f'<th scope="row" class="name">{student}</th>\n'
         for score in students[student]:
             html += f'<td>{score}</td>\n'
         html += f'<td>{sum(map(int, students[student]))}</td>\n'
-    html += '</tbody>'
+    html += '</tbody>\n</table>\n</div>\n</main>'
     return html
 
 
