@@ -3,17 +3,17 @@ from datetime import datetime
 
 CONTESTS = [
     {
-        'id': [45316],
+        'id': (45316,),
         'name': 'Вывод данных',
         'href': 'topics/data-output.html',
     },
     {
-        'id': [45344],
+        'id': (45344,),
         'name': 'Ввод данных',
         'href': 'topics/data-input.html',
     },
     {
-        'id': [45720],
+        'id': (45720, 45855),
         'name': 'Арифметические операции',
         'href': 'topics/arithmetic.html',
     },
@@ -55,7 +55,7 @@ def update_results(students: dict, contests: list) -> dict:
                     for row in reader:
                         name = row['user_name']
                         score = row['Score']
-                        students[name][number] = score
+                        students[name][number] = int(students[name][number]) + int(score)
             except FileNotFoundError:
                 print(f"Не найден файл с результатами олимпиады {contest_id}.")
 
