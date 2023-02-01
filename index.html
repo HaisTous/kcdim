@@ -29,7 +29,7 @@
           <a href="students.html">Учащиеся</a>
         </li>
         <li>
-          <a href="achievements.html">Достижения</a>
+          <a href="events.html">Олимпиады</a>
         </li>
         <li>
           <a href="links.html">Ссылки</a>
@@ -70,43 +70,58 @@
 </header>
 <div class="container">
   <main>
-    <h2 class="title">Ближайшие олимпиады</h2>
-    <div class="stripped-table">
-      <table >
-        <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Начало</th>
-          <th scope="col">Конец</th>
-          <th scope="col">Олимпиада</th>
-          <th scope="col">Возрастная категория</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>03.02.2023 17:35</td>
-            <td>03.02.2023 20:00</td>
-            <th scope="row" class="hover:underline">
-              <a href="https://codeforces.com/contests">Codeforces Round #849 (Div. 4)</a>
-            </th>
-            <td>Любой желающий</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>18.03.2023 09:00</td>
-            <td>19.03.2023 21:00</td>
-            <th scope="row" class="hover:underline">
-              <a href="https://vk.com/olimp_prog_spb">
-                Второй отборочный онлайн тур X Открытой олимпиады по программированию среди учащихся начальной школы
-              </a>
-            </th>
-            <td>1-4 классы</td>
-          </tr>
-        </tbody>
-      </table>
+    <h2 class="title section" data-section="2022-2023" id="2022-2023">2022-2023 учебный год</h2>
+    <div class="event border-b-2 broder-gray-300 dark:border-gray-700 pb-4">
+      <p class="my-4 italic">29-30 октября 2022 года прошла Санкт-Петербургская открытая олимпиада по программированию
+        для 3-7 классов.</p>
+      <a
+          class="hover:text-red-500"
+          href="https://docs.google.com/spreadsheets/d/1eD8xDAol2Ick8ozChDLH4erZj6Tq5MlhNu1XAr_gpBA/edit#gid=0"
+          target="_blank">
+        Результаты:
+      </a>
+      <ul class="font-bold">
+        <li>Смолечков Матвей - Диплом 3 степени</li>
+      </ul>
+      <div class="flex flex-row justify-center space-x-4">
+        <a href="img/achievements/smolechkov-30102022.webp" target="_blank">
+          <img class="max-h-52 max-w-auto" src="img/achievements/smolechkov-30102022.webp" alt="Смолечков">
+        </a>
+      </div>
     </div>
+    <div class="event">
+      <p class="my-4 italic">17 сентября 2022 года состоялась областная Интернет-олимпиада по информатике.</p>
+      <a
+          class="hover:text-red-500"
+          href="https://docs.google.com/spreadsheets/d/1z0mnVBlFyRu9cj4WCB2414k-EDmWzvt9/edit#gid=1913548864"
+          target="_blank">
+        Результаты:
+      </a>
+      <ul class="font-bold">
+        <li>Шипневский Иван - Диплом 2 степени</li>
+        <li>Коваль Максим - Диплом 3 степени</li>
+      </ul>
+      <div class="flex flex-row justify-center space-x-4">
+        <a href="img/achievements/shipnevsky-17092022.webp" target="_blank">
+          <img class="max-h-52 max-w-auto" src="img/achievements/shipnevsky-17092022.webp" alt="Шипневский">
+        </a>
+        <a href="img/achievements/koval-17092022.webp" target="_blank">
+          <img class="max-h-52 max-w-auto" src="img/achievements/koval-17092022.webp" alt="Коваль">
+        </a>
+      </div>
   </main>
+  <aside class="sidebar">
+    <h3 class="text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-gray-100">
+      Учебный год
+    </h3>
+    <nav class="sidebar-nav">
+      <ul>
+        <li data-section="operations" class="sidebar-nav__li sidebar-nav__active">
+          <a href="#2022-2023">2022-2023 гг.</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 </div>
 </body>
 </html>
