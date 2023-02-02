@@ -187,4 +187,31 @@
         @apply bg-white bg-gray-100
         dark:bg-slate-700 dark:border-slate-600;
     }
+
+    /*Олимпиады */
+    .event {
+        @apply border-b-2 border-gray-300 mb-4
+        dark:border-gray-700;
+    }
+    .event__title {
+        @apply italic;
+    }
+    .event__results {
+        @apply my-4;
+    }
+    .event__results a {
+        @apply hover:text-red-500;
+    }
+    .event__results ul {
+        @apply font-bold;
+    }
+    .event__diplomas {
+        @apply flex flex-row justify-center gap-4 flex-wrap my-4;
+    }
+    .event__diplomas a {
+        @apply hover:scale-110 ease-linear duration-300;
+    }
+    .event__diplomas img {
+        @apply w-32 h-auto;
+    }
 }
