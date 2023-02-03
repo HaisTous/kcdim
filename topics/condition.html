@@ -180,6 +180,199 @@
           </path>
         </svg>
     </span>
+    <h2 class="title section my-4" data-section="alternative-execution" id="alternative-execution">Альтернативное выполнение</h2>
+    <p>Вторая форма инструкции <code class="statement">if</code> — <span class="font-semibold">
+      "альтернативное выполнение"</span>, в котором есть две возможности, и условие определяет, какая из них выполняется.
+      Синтаксис выглядит так:
+    </p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> x % <span class="number">2</span> == <span class="number">0</span>:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - чётное число"</span>)
+<span class="line-number">3</span><span class="statement">else</span>:
+<span class="line-number">4</span><span class="function tab1">print</span>(<span class="string">f"x - нечётное число"</span>)</code></pre>
+    <p>Если остаток от деления <code>x</code> на <code>2</code> равен <code>0</code>, то мы знаем, что <code>x</code> —
+      четное число, и программа отображает соответствующее сообщение. Если условие ложно, выполняется второй набор
+      инструкций. Поскольку условие может быть либо истинным, либо ложным, будет выполнена ровно одна из альтернатив.
+      Альтернативы называются <span class="font-semibold">ветвями</span>, потому что это и есть ветви в потоке выполнения.</p>
+    <span href="https://official.contest.yandex.ru/contest/45855/enter" class="disabled-block-link" target="_blank">
+        <span class="w-full">Практические задания</span>
+        <svg
+            aria-hidden="true"
+            class="w-6 h-6 ml-3"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+          <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
+          </path>
+        </svg>
+    </span>
+    <h2 class="title section my-4" data-section="сhained-conditionals" id="сhained-conditionals">Связанные условия</h2>
+    <p>Иногда существует более двух возможностей и требуется более двух ветвей. Один из способов выразить подобное
+      вычисление — использовать <span class="font-semibold">связанные условия</span>:
+    </p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> x < y:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x меньше, чем y"</span>)
+<span class="line-number">3</span><span class="statement">elif</span> x > y:
+<span class="line-number">4</span><span class="function tab1">print</span>(<span class="string">f"x больше, чем y"</span>)
+<span class="line-number">5</span><span class="statement">else</span>:
+<span class="line-number">6</span><span class="function tab1">print</span>(<span class="string">f"x и y равны"</span>)</code></pre>
+    <p><code class="statement">elif</code> — это аббревиатура для "<code class="statement">else if</code>". Выполняться
+      будет только одна ветвь. Ограничений на количество инструкций <code class="statement">elif</code> нет.
+      Инструкция <code class="statement">else</code> должна быть указана в конце.</p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> month == <span class="number">1</span>:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"January"</span>)
+<span class="line-number">3</span><span class="statement">elif</span> month == <span class="number">2</span>:
+<span class="line-number">4</span><span class="function tab1">print</span>(<span class="string">f"February"</span>)
+<span class="line-number">5</span><span class="statement">elif</span> month == <span class="number">3</span>:
+<span class="line-number">6</span><span class="function tab1">print</span>(<span class="string">f"March"</span>)</code></pre>
+    <p>Каждое условие проверяется по порядку. Если первое ложно, проверяется следующее, и так далее. Если одно из них
+      истинно, выполняется соответствующая ветвь, и инструкция заканчивает свою работу. Даже если истинно более чем
+      одно условие, выполняется только <span class="font-semibold">первая</span> истинная ветвь.</p>
+    <span href="https://official.contest.yandex.ru/contest/45855/enter" class="disabled-block-link" target="_blank">
+        <span class="w-full">Практические задания</span>
+        <svg
+            aria-hidden="true"
+            class="w-6 h-6 ml-3"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+          <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
+          </path>
+        </svg>
+    </span>
+    <h2 class="title section my-4" data-section="nested-conditionals" id="nested-conditionals">Вложенные условия</h2>
+    <p>Одно условие также может быть вложено в другое. Мы могли бы переписать пример из предыдущего раздела
+      следующим образом:</p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> x == y:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x и y равны"</span>)
+<span class="line-number">3</span><span class="statement">else</span>:
+<span class="line-number">4</span><span class="statement tab1">if</span> x < y:
+<span class="line-number">5</span><span class="function tab2">print</span>(<span class="string">f"x меньше, чем y"</span>)
+<span class="line-number">6</span><span class="statement tab1">else</span>:
+<span class="line-number">7</span><span class="function tab2">print</span>(<span class="string">f"x больше, чем y"</span>)</code></pre>
+    <p>Внешняя условная инструкция содержит две ветви. Первая ветвь содержит обычную инструкцию. Вторая ветвь содержит
+      еще одну инструкцию <code class="statement">if</code>, у которой две собственные ветви. Эти две ветви — простые
+      инструкции. Разумеется, они могли бы быть так же и условными операторами.</p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> < x:
+<span class="line-number">2</span><span class="statement tab1">if</span> x < <span class="number">10</span>:
+<span class="line-number">3</span><span class="function tab2">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
+    <p>Несмотря на то что отступы инструкций позволяют разглядеть структуру, <span class="font-semibold">
+      вложенные условные инструкции</span> очень трудно прочитать с ходу. Поэтому рекомендуется их избегать.</p>
+    <h2 class="title section my-4" data-section="logical-operators" id="logical-operators">Логические операторы</h2>
+    <p>Существует три <span class="font-semibold">логических оператора</span>: <code>not</code>, <code>and</code> и
+      <code>or</code>. Значение этих операторов аналогично значению этих слов в английском языке.</p>
+    <p class="mt-4">Например, <code>x > 0 and x < 10</code> истинно, только если <code>x</code> больше <code>0</code>
+      и меньше <code>10</code>.</p>
+    <p class="mt-4"><code>n % 2 == 0 or n % 3 == 0</code> истинно, если выполняется одно или оба условия, то есть
+      если число делится на <code>2</code> или на <code>3</code> без остатка.</p>
+    <p class="mt-4">Наконец, оператор <code>not</code> отрицает логическое выражение, поэтому <code>not (x > y)</code>
+      истинно, если <code>x > y</code> ложно, то есть если <code>x</code> меньше или равно <code>y</code>.</p>
+    <div class="stripped-table my-4">
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">Оператор</th>
+          <th scope="col">Назначение</th>
+          <th scope="col">Выражение</th>
+          <th scope="col">Результат</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>not</code></td>
+          <td>Логическое <span class="font-semibold italic">НЕ</span></td>
+          <td>
+            <code>not True</code>
+            <br>
+            <code>not False</code>
+          </td>
+          <td>
+            <code>False</code>
+            <br>
+            <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>and</code></td>
+          <td>Логическое <span class="font-semibold italic">И</span></td>
+          <td>
+            <code>False and False</code>
+            <br>
+            <code>False and True</code>
+            <br>
+            <code>True and False</code>
+            <br>
+            <code>True and True</code>
+          </td>
+          <td>
+            <code>False</code>
+            <br>
+            <code>False</code>
+            <br>
+            <code>False</code>
+            <br>
+            <code>True</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>or</code></td>
+          <td>Логическое <span class="font-semibold italic">ИЛИ</span></td>
+          <td>
+            <code>False or False</code>
+            <br>
+            <code>False or True</code>
+            <br>
+            <code>True or False</code>
+            <br>
+            <code>True or True</code>
+          </td>
+          <td>
+            <code>False</code>
+            <br>
+            <code>True</code>
+            <br>
+            <code>True</code>
+            <br>
+            <code>True</code>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Логические операторы часто предоставляют способ упростить набор вложенных условных инструкций. Например, мы
+      можем переписать предыдущий код, используя всего одно условие и логический оператор <code>and</code>:</p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> x < <span class="number">0</span> <span class="statement">and</span> x < <span class="number">10</span>:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
+    <p>Для такого рода условий <code>Python</code> предоставляет более краткий вариант записи:</p>
+    <pre><code>
+<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> < x < <span class="number">10</span>:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
+    <span href="https://official.contest.yandex.ru/contest/45855/enter" class="disabled-block-link" target="_blank">
+        <span class="w-full">Практические задания</span>
+        <svg
+            aria-hidden="true"
+            class="w-6 h-6 ml-3"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+          <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
+          </path>
+        </svg>
+    </span>
   </main>
   <aside class="sidebar">
     <h3 class="text-sm font-semibold tracking-wide text-gray-900 uppercase dark:text-gray-100">
@@ -195,6 +388,18 @@
         </li>
         <li data-section="сonditional-execution" class="sidebar-nav__li">
           <a href="#сonditional-execution">Условное выполннение</a>
+        </li>
+        <li data-section="alternative-execution" class="sidebar-nav__li">
+          <a href="#alternative-execution">Альтернативное выполнение</a>
+        </li>
+        <li data-section="сhained-conditionals" class="sidebar-nav__li">
+          <a href="#сhained-conditionals">Связанные условия</a>
+        </li>
+        <li data-section="nested-conditionals" class="sidebar-nav__li">
+          <a href="#nested-conditionals">Вложенные условия</a>
+        </li>
+        <li data-section="logical-operators" class="sidebar-nav__li">
+          <a href="#logical-operators">Логические операторы</a>
         </li>
       </ul>
     </nav>
