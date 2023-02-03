@@ -45,6 +45,12 @@
         @apply text-fuchsia-600
         dark:text-fuchsia-400;
     }
+    .tab1 {
+        @apply ml-8;
+    }
+    .tab2 {
+        @apply ml-16;
+    }
 
     /*Шапка*/
     header {
