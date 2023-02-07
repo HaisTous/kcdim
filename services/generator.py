@@ -5,7 +5,7 @@ from shutil import rmtree
 from zipfile import ZipFile
 
 NUMBER_OF_TESTS = 20
-SAMPLES = ['1 2\n3', '2 4\n3', '5 5\n5']
+SAMPLES = ['1 1 1', '8 5 2', '11 5 4', '100000000 100000000 100000000']
 
 
 def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
@@ -75,7 +75,7 @@ def save_data(data: list[str], mode: str) -> None:
         else:
             ext = ""
 
-        file_data = open(f"tests/{name}{ext}", "w")
+        file_data = open(f"tests/{name}{ext}", "w", encoding="utf-8")
         file_data.write(data[i])
 
 
