@@ -5,7 +5,7 @@ from shutil import rmtree
 from zipfile import ZipFile
 
 NUMBER_OF_TESTS = 20
-SAMPLES = ['1 1 1', '8 5 2', '11 5 4', '100000000 100000000 100000000']
+SAMPLES = ['1', '7', '-20', '10000000000', '-10000000000', '0']
 
 
 def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
@@ -14,7 +14,8 @@ def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
     tests = samples[:]
 
     while len(tests) < number_of_tests:
-        test = f""
+        a = randint(-10**9, 10**9)
+        test = f"{a}"
         if test not in tests:
             tests.append(test)
 
@@ -36,7 +37,11 @@ def gen_output_data(input_data: list[str]) -> list[str]:
 def solution(input_test: list[str]) -> str:
     """Решение задачи"""
 
-    return f""
+    a = int(input_test[0])
+    if a > 0:
+        return f"Water"
+    else:
+        return f"Ice"
 
 
 def delete_folder(folder_name: str) -> None:
