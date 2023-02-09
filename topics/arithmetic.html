@@ -146,32 +146,68 @@
 <span class="line-number">>>></span>24
 <span class="line-number">>>></span>(3 * 2) ** 3
 <span class="line-number">>>></span>729</code></pre>
-    <p class="font-semibold underline">Пример</p>
-    <p>Требуется сложить два целых числа <code>a</code> и <code>b</code>, записанных в столбик.</p>
-   <pre><code>
-<span class="line-number">1</span>a = <span class="function">int</span>(<span class="function">input</span>())
-<span class="line-number">2</span>b = <span class="function">int</span>(<span class="function">input</span>())
-<span class="line-number">3</span>c = a + b
-<span class="line-number">4</span><span class="function">print</span>(<span class="string">f"</span><span class="function">{</span>c<span class="function">}</span><span class="string">"</span>)</code></pre>
+    <h2 class="title section" data-section="compound-operations" id="compound-operations">
+      Составные арифметические операции с присваиванием
+    </h2>
+    <p>В языке <span class="font-semibold italic">Python</span> имеются специальные операции, которые можно являются
+      объединением арифметической операции с операцией присваивания.
+    </p>
+    <p class="mt-4">Операторы вроде показанного ниже в программах встречаются достаточно часто:</p>
     <pre><code>
-<span class="line-number">>>></span>3
-<span class="line-number">>>></span>5
-<span class="line-number">>>></span>8</code></pre>
-    <a href="https://official.contest.yandex.ru/contest/45720/enter" class="block-link" target="_blank">
-        <span class="w-full">Практические задания</span>
-        <svg
-            aria-hidden="true"
-            class="w-6 h-6 ml-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-          </path>
-        </svg>
-    </a>
+<span class="line-number">>>></span>а = а + 4</code></pre>
+    <p>В языке <span class="font-semibold italic">Python</span> этот оператор можно записать следующим образом:</p>
+    <pre><code>
+<span class="line-number">>>></span>а += 4</code></pre>
+    <p>В этой версии оператора использована составная операция присваивания <code>+=</code>. Оба оператора выполняют
+      одно и то же действие: они увеличивают значение переменной <code>a</code> на 4.</p>
+    <div class="stripped-table my-4">
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">Оператор</th>
+          <th scope="col">Полная запись</th>
+          <th scope="col">Короткая запись</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>+=</code></td>
+          <td><code>a = a + 4</code></td>
+          <td><code>a += 4</code></td>
+        </tr>
+        <tr>
+          <td><code>-=</code></td>
+          <td><code>a = a - 3</code></td>
+          <td><code>a -= 3</code></td>
+        </tr>
+        <tr>
+          <td><code>*=</code></td>
+          <td><code>a = a * 2</code></td>
+          <td><code>a *= 2</code></td>
+        </tr>
+        <tr>
+          <td><code>/=</code></td>
+          <td><code>a = a / 6</code></td>
+          <td><code>a /= 6</code></td>
+        </tr>
+        <tr>
+          <td><code>//=</code></td>
+          <td><code>a = a // 8</code></td>
+          <td><code>a //= 8</code></td>
+        </tr>
+        <tr>
+          <td><code>%=</code></td>
+          <td><code>a = a % 10</code></td>
+          <td><code>a %= 10</code></td>
+        </tr>
+        <tr>
+          <td><code>**=</code></td>
+          <td><code>a = a ** 0.5</code></td>
+          <td><code>a **= 0.5</code></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 class="title section" data-section="numbers" id="numbers">Обработка цифр числа</h2>
     <p>Одной из часто используемых задач является нахождение цифр числа. Для того чтобы найти все цифры
       <span class="underline">целого положительного числа</span>, нужно использовать две арифметические
@@ -250,6 +286,9 @@
       <ul>
         <li data-section="operations" class="sidebar-nav__li sidebar-nav__active">
           <a href="#operations">Арифметические операции</a>
+        </li>
+        <li data-section="compound-operations" class="sidebar-nav__li">
+          <a href="#compound-operations">Составные арифметические операции с присваиванием</a>
         </li>
         <li data-section="numbers" class="sidebar-nav__li">
           <a href="#numbers">Обработка цифр числа</a>
