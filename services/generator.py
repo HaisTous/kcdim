@@ -4,8 +4,28 @@ from random import randint, uniform
 from shutil import rmtree
 from zipfile import ZipFile
 
+
+EN_UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+EN_LOWER = 'abcdefghijklmnopqrstuvwxyz'
+RU_UPPER = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧЩЩЪЫЬЭЮЯ'
+RU_LOWER = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+DIGS = '0123456789'
+SYMBOLS = '!@#№$;%^:&?*()_-+=~[]{}'
+
 NUMBER_OF_TESTS = 20
-SAMPLES = ['1', '7', '-20', '10000000000', '-10000000000', '0']
+SAMPLES = ['1', '2', '3']
+
+
+def gen_text(characters: str, length: int) -> str:
+    """Генерация текста из символов characters длиной меньше length"""
+
+    text = ''
+    n = randint(1, length)
+    for _ in range(n):
+        i = randint(0, len(characters) - 1)
+        text += characters[i]
+
+    return text
 
 
 def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
@@ -14,7 +34,7 @@ def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
     tests = samples[:]
 
     while len(tests) < number_of_tests:
-        a = randint(-10**9, 10**9)
+        a = randint(1, 10**9)
         test = f"{a}"
         if test not in tests:
             tests.append(test)
@@ -37,11 +57,9 @@ def gen_output_data(input_data: list[str]) -> list[str]:
 def solution(input_test: list[str]) -> str:
     """Решение задачи"""
 
-    a = int(input_test[0])
-    if a > 0:
-        return f"Water"
-    else:
-        return f"Ice"
+    print(input_test)
+
+    return f""
 
 
 def delete_folder(folder_name: str) -> None:
