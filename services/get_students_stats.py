@@ -18,7 +18,7 @@ CONTESTS = [
         'href': 'topics/arithmetic.html',
     },
     {
-        'id': (46059, 46125, 46126,),
+        'id': (46059, 46125, 46126, 46127),
         'name': 'Условный оператор',
         'href': 'topics/condition.html',
     },

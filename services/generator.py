@@ -13,7 +13,7 @@ DIGS = '0123456789'
 SYMBOLS = '!@#№$;%^:&?*()_-+=~[]{}'
 
 NUMBER_OF_TESTS = 20
-SAMPLES = ['1', '2', '3']
+SAMPLES = ['', '', '']
 
 
 def gen_text(characters: str, length: int) -> str:
@@ -34,8 +34,7 @@ def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
     tests = samples[:]
 
     while len(tests) < number_of_tests:
-        a = randint(1, 10**9)
-        test = f"{a}"
+        test = f""
         if test not in tests:
             tests.append(test)
 
@@ -57,9 +56,11 @@ def gen_output_data(input_data: list[str]) -> list[str]:
 def solution(input_test: list[str]) -> str:
     """Решение задачи"""
 
-    print(input_test)
+    output_test = ''
 
-    return f""
+    print(f"{input_test = }\t{output_test = }\n{'-' * 100}")
+
+    return f"{output_test}"
 
 
 def delete_folder(folder_name: str) -> None:
