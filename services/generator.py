@@ -16,11 +16,11 @@ NUMBER_OF_TESTS = 20
 SAMPLES = ['', '', '']
 
 
-def gen_text(characters: str, length: int) -> str:
-    """Генерация текста из символов characters длиной меньше length"""
+def gen_text(characters: str, min_length: int, max_length: int) -> str:
+    """Генерация текста из символов characters длиной больше min_length и меньше max_length"""
 
     text = ''
-    n = randint(1, length)
+    n = randint(min_length, max_length)
     for _ in range(n):
         i = randint(0, len(characters) - 1)
         text += characters[i]
@@ -56,7 +56,7 @@ def gen_output_data(input_data: list[str]) -> list[str]:
 def solution(input_test: list[str]) -> str:
     """Решение задачи"""
 
-    output_test = ''
+    output_test = f""
 
     print(f"{input_test = }\t{output_test = }\n{'-' * 100}")
 
