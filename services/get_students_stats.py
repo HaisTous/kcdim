@@ -1,5 +1,5 @@
 from csv import DictReader
-from datetime import datetime
+from datetime import datetime as dt
 
 CONTESTS = [
     {
@@ -67,14 +67,33 @@ def update_results(students: dict, contests: list) -> dict:
     return students
 
 
+def get_current_datetime() -> str:
+    """Получение текущих даты и времени"""
+
+    current_datetime = dt.now()
+    datetime = str(current_datetime)[:16]
+
+    months = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+              'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+    month_number = int(datetime[5:7])
+    month = months[month_number]
+
+    day = int(datetime[8:10])
+
+    year = datetime[:4]
+
+    time = datetime[11:]
+
+    return f"{day} {month} {year} года в {time}"
+
+
 def generate_html(students: dict) -> str:
     """Генерация html-файла со списком учащихся"""
 
-    current_datetime = datetime.now()
-    date = str(current_datetime)[:16]
+    datetime = get_current_datetime()
 
     html = f'<main>\n<h2 class="title">Список учащихся</h2>\n' \
-           f'<p class="updated_date">Последнее обновление: {date}</p>\n' \
+           f'<p class="updated_date">Последнее обновление: {datetime}</p>\n' \
            f'<div class="stripped-table">\n' \
            f'<table>\n<thead>\n<tr>\n<th scope="col">#</th>\n' \
            f'<th scope="col" class="text-left">Учащийся</th>\n' \

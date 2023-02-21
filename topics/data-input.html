@@ -81,40 +81,48 @@
     <p>Если пользователь должен ввести целое число, то вы можете попробовать преобразовать возвращаемое значение в тип
       <code class="function">int</code>:</p>
     <pre><code>
-<span class="line-number">1</span>a = <span class="function">int</span>(<span class="function">input</span>())</code></pre>
+<span class="line-number">1</span>a = <span class="function">int</span>(<span
+            class="function">input</span>())</code></pre>
     <p>Для ввода вещественных чисел используется функция <code class="function">float()</code>:</p>
     <pre><code>
 <span class="line-number">1</span>a = <span class="function">float</span>(<span class="function">input</span>())</code></pre>
     <p>Если пользователь должен ввести несколько значений через пробел, то можно использовать следующие конструкции:</p>
     <pre><code>
-<span class="line-number">1</span>a, b = <span class="function">map</span>(<span class="function">int</span>, <span class="function">input</span>().<span class="method">split</span>())
-<span class="line-number">2</span>c, d = <span class="function">map</span>(<span class="function">float</span>, <span class="function">input</span>().<span class="method">split</span>())
-<span class="line-number">3</span>e, f = <span class="function">input</span>().<span class="method">split</span>()</code></pre>
+<span class="line-number">1</span>a, b = <span class="function">map</span>(<span class="function">int</span>, <span
+            class="function">input</span>().<span class="method">split</span>())
+<span class="line-number">2</span>c, d = <span class="function">map</span>(<span class="function">float</span>, <span
+            class="function">input</span>().<span class="method">split</span>())
+<span class="line-number">3</span>e, f = <span class="function">input</span>().<span
+            class="method">split</span>()</code></pre>
     <p class="font-semibold underline mt-4">Пример</p>
     <p>Требуется вывести равенство в следующем формате: <code>a+b = b+a</code>. <code>a</code> и <code>b</code> - целые
-    числа, записанные в столбик.</p>
+      числа, записанные в столбик.</p>
     <pre><code>
 <span class="line-number">1</span>a = <span class="function">int</span>(<span class="function">input</span>())
 <span class="line-number">2</span>b = <span class="function">int</span>(<span class="function">input</span>())
-<span class="line-number">3</span><span class="function">print</span>(<span class="string">f"</span><span class="function">{</span>a<span class="function">}</span><span class="string">+</span><span class="function">{</span>b<span class="function">}</span> <span class="string">=</span> <span class="function">{</span>b<span class="function">}</span><span class="string">+</span><span class="function">{</span>a<span class="function">}</span><span class="string">"</span>)</code></pre>
+<span class="line-number">3</span><span class="function">print</span>(<span class="string">f"</span><span
+            class="function">{</span>a<span class="function">}</span><span class="string">+</span><span
+            class="function">{</span>b<span class="function">}</span> <span class="string">=</span> <span
+            class="function">{</span>b<span class="function">}</span><span class="string">+</span><span
+            class="function">{</span>a<span class="function">}</span><span class="string">"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>3
 <span class="line-number">>>></span>5
 <span class="line-number">>>></span>3+5 = 5+3</code></pre>
     <a href="https://official.contest.yandex.ru/contest/45344/enter" class="block-link" target="_blank">
-        <span class="w-full">Практические задания</span>
-        <svg
-            aria-hidden="true"
-            class="w-6 h-6 ml-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+      <span class="w-full">Практические задания</span>
+      <svg
+              aria-hidden="true"
+              class="w-6 h-6 ml-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+        <path
+                fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
               110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-          </path>
-        </svg>
+        </path>
+      </svg>
     </a>
   </main>
 

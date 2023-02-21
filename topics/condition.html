@@ -82,7 +82,8 @@
 <span class="line-number">>>></span>5 == 6
 <span class="line-number">>>></span>False</code></pre>
     <p><code>True</code> и <code>False</code> — это специальные значения, принадлежащие типу <code>bool</code>.</p>
-    <h2 class="title section my-4" data-section="comparison-operators" id="comparison-operators">Операторы сравнения</h2>
+    <h2 class="title section my-4" data-section="comparison-operators" id="comparison-operators">Операторы
+      сравнения</h2>
     <div class="stripped-table my-4">
       <table>
         <thead>
@@ -157,7 +158,8 @@
         </tbody>
       </table>
     </div>
-    <h2 class="title section my-4" data-section="сonditional-execution" id="сonditional-execution">Условное выполнение</h2>
+    <h2 class="title section my-4" data-section="сonditional-execution" id="сonditional-execution">Условное
+      выполнение</h2>
     <p>Для написания полезных программ почти всегда нужна возможность проверять условия и соответственно изменять
       поведение программы. Условные инструкции дают нам эту возможность. Самая простая форма — это инструкция
       <code class="statement">if</code>:</p>
@@ -171,7 +173,8 @@
 <span class="line-number">1</span>x = <span class="function">int</span>(<span class="function">input</span>())
 <span class="line-number">2</span><span class="statement">if</span> x <= <span class="number">0</span>:
 <span class="line-number">3</span><span class="tab1">x += </span><span class="number">2</span>
-<span class="line-number">4</span><span class="function">print</span>(<span class="string">f"</span><span class="function">{</span>x<span class="function">}</span><span class="string">"</span>)</code></pre>
+<span class="line-number">4</span><span class="function">print</span>(<span class="string">f"</span><span
+            class="function">{</span>x<span class="function">}</span><span class="string">"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>0
 <span class="line-number">>>></span>2
@@ -179,42 +182,50 @@
 <span class="line-number">>>></span>5
 <span class="line-number">>>></span>5</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46059/enter" class="block-link" target="_blank">
-        <span class="w-full">Практические задания</span>
-        <svg
-            aria-hidden="true"
-            class="w-6 h-6 ml-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+      <span class="w-full">Практические задания</span>
+      <svg
+              aria-hidden="true"
+              class="w-6 h-6 ml-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+        <path
+                fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
               110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-          </path>
-        </svg>
+        </path>
+      </svg>
     </a>
-    <h2 class="title section my-4" data-section="alternative-execution" id="alternative-execution">Альтернативное выполнение</h2>
+    <h2 class="title section my-4" data-section="alternative-execution" id="alternative-execution">Альтернативное
+      выполнение</h2>
     <p>Вторая форма инструкции <code class="statement">if</code> — <span class="font-semibold">
-      "альтернативное выполнение"</span>, в котором есть две возможности, и условие определяет, какая из них выполняется.
+      "альтернативное выполнение"</span>, в котором есть две возможности, и условие определяет, какая из них
+      выполняется.
       Синтаксис выглядит так:
     </p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> x % <span class="number">2</span> == <span class="number">0</span>:
-<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - чётное число"</span>)
+<span class="line-number">1</span><span class="statement">if</span> x % <span class="number">2</span> == <span
+            class="number">0</span>:
+<span class="line-number">2</span><span class="function tab1">print</span>(<span
+            class="string">f"x - чётное число"</span>)
 <span class="line-number">3</span><span class="statement">else</span>:
-<span class="line-number">4</span><span class="function tab1">print</span>(<span class="string">f"x - нечётное число"</span>)</code></pre>
+<span class="line-number">4</span><span class="function tab1">print</span>(<span
+            class="string">f"x - нечётное число"</span>)</code></pre>
     <p>Если остаток от деления <code>x</code> на <code>2</code> равен <code>0</code>, то мы знаем, что <code>x</code> —
       четное число, и программа отображает соответствующее сообщение. Если условие ложно, выполняется второй набор
       инструкций. Поскольку условие может быть либо истинным, либо ложным, будет выполнена ровно одна из альтернатив.
-      Альтернативы называются <span class="font-semibold">ветвями</span>, потому что это и есть ветви в потоке выполнения.</p>
+      Альтернативы называются <span class="font-semibold">ветвями</span>, потому что это и есть ветви в потоке
+      выполнения.</p>
     <p class="font-semibold underline mt-4">Пример</p>
     <p>Выведите YES в том случае, если <code>a + b = c</code> и выведите NO в противном случае.</p>
     <pre><code>
-<span class="line-number">1</span>a, b, c = <span class="function">map</span>(<span class="function">int</span>, <span class="function">input</span>().<span class="method">split</span>())
+<span class="line-number">1</span>a, b, c = <span class="function">map</span>(<span class="function">int</span>, <span
+            class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">2</span><span class="statement">if</span> a + b == c:
 <span class="line-number">3</span><span class="function tab1">print</span>(<span class="string">f"YES"</span>)
 <span class="line-number">4</span><span class="statement">else</span>:
-<span class="line-number">5</span><span class="function tab1">print</span>(<span class="string">f"NO"</span>)</code></pre>
+<span class="line-number">5</span><span class="function tab1">print</span>(<span
+            class="string">f"NO"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>1 2 3
 <span class="line-number">>>></span>YES
@@ -222,19 +233,19 @@
 <span class="line-number">>>></span>2 5 8
 <span class="line-number">>>></span>NO</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46125/enter" class="block-link" target="_blank">
-        <span class="w-full">Практические задания</span>
-        <svg
-            aria-hidden="true"
-            class="w-6 h-6 ml-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+      <span class="w-full">Практические задания</span>
+      <svg
+              aria-hidden="true"
+              class="w-6 h-6 ml-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+        <path
+                fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
               110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-          </path>
-        </svg>
+        </path>
+      </svg>
     </a>
     <h2 class="title section my-4" data-section="сhained-conditionals" id="сhained-conditionals">Связанные условия</h2>
     <p>Иногда существует более двух возможностей и требуется более двух ветвей. Один из способов выразить подобное
@@ -242,11 +253,14 @@
     </p>
     <pre><code>
 <span class="line-number">1</span><span class="statement">if</span> x < y:
-<span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x меньше, чем y"</span>)
+<span class="line-number">2</span><span class="function tab1">print</span>(<span
+            class="string">f"x меньше, чем y"</span>)
 <span class="line-number">3</span><span class="statement">elif</span> x > y:
-<span class="line-number">4</span><span class="function tab1">print</span>(<span class="string">f"x больше, чем y"</span>)
+<span class="line-number">4</span><span class="function tab1">print</span>(<span
+            class="string">f"x больше, чем y"</span>)
 <span class="line-number">5</span><span class="statement">else</span>:
-<span class="line-number">6</span><span class="function tab1">print</span>(<span class="string">f"x и y равны"</span>)</code></pre>
+<span class="line-number">6</span><span class="function tab1">print</span>(<span
+            class="string">f"x и y равны"</span>)</code></pre>
     <p><code class="statement">elif</code> — это аббревиатура для "<code class="statement">else if</code>". Выполняться
       будет только одна ветвь. Ограничений на количество инструкций <code class="statement">elif</code> нет.
       Инструкция <code class="statement">else</code> должна быть указана в конце.</p>
@@ -264,8 +278,10 @@
     <p>Известны результаты каждого из двух таймов футбольного матча. Выведите номер выигравшей команды, в случае ничьей
       следует вывести «DRAW».</p>
     <pre><code>
-<span class="line-number">1</span>a1, b1 = <span class="function">map</span>(<span class="function">int</span>, <span class="function">input</span>().<span class="method">split</span>())
-<span class="line-number">2</span>a2, b2 = <span class="function">map</span>(<span class="function">int</span>, <span class="function">input</span>().<span class="method">split</span>())
+<span class="line-number">1</span>a1, b1 = <span class="function">map</span>(<span class="function">int</span>, <span
+            class="function">input</span>().<span class="method">split</span>())
+<span class="line-number">2</span>a2, b2 = <span class="function">map</span>(<span class="function">int</span>, <span
+            class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">3</span>a = a1 + a2
 <span class="line-number">4</span>b = b1 + b2
 <span class="line-number">5</span><span class="statement">if</span> a > b:
@@ -287,19 +303,19 @@
 <span class="line-number">>>></span>1 1
 <span class="line-number">>>></span>DRAW</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46126/enter" class="block-link" target="_blank">
-        <span class="w-full">Практические задания</span>
-        <svg
-            aria-hidden="true"
-            class="w-6 h-6 ml-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+      <span class="w-full">Практические задания</span>
+      <svg
+              aria-hidden="true"
+              class="w-6 h-6 ml-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+        <path
+                fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
               110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-          </path>
-        </svg>
+        </path>
+      </svg>
     </a>
     <h2 class="title section my-4" data-section="nested-conditionals" id="nested-conditionals">Вложенные условия</h2>
     <p>Одно условие также может быть вложено в другое. Мы могли бы переписать пример из предыдущего раздела
@@ -309,9 +325,11 @@
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x и y равны"</span>)
 <span class="line-number">3</span><span class="statement">else</span>:
 <span class="line-number">4</span><span class="statement tab1">if</span> x < y:
-<span class="line-number">5</span><span class="function tab2">print</span>(<span class="string">f"x меньше, чем y"</span>)
+<span class="line-number">5</span><span class="function tab2">print</span>(<span
+            class="string">f"x меньше, чем y"</span>)
 <span class="line-number">6</span><span class="statement tab1">else</span>:
-<span class="line-number">7</span><span class="function tab2">print</span>(<span class="string">f"x больше, чем y"</span>)</code></pre>
+<span class="line-number">7</span><span class="function tab2">print</span>(<span
+            class="string">f"x больше, чем y"</span>)</code></pre>
     <p>Внешняя условная инструкция содержит две ветви. Первая ветвь содержит обычную инструкцию. Вторая ветвь содержит
       еще одну инструкцию <code class="statement">if</code>, у которой две собственные ветви. Эти две ветви — простые
       инструкции. Разумеется, они могли бы быть так же и условными операторами.</p>
@@ -405,24 +423,30 @@
     <p>Логические операторы часто предоставляют способ упростить набор вложенных условных инструкций. Например, мы
       можем переписать предыдущий код, используя всего одно условие и логический оператор <code>and</code>:</p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> x < <span class="number">0</span> <span class="statement">and</span> x < <span class="number">10</span>:
+<span class="line-number">1</span><span class="statement">if</span> x < <span class="number">0</span> <span
+            class="statement">and</span> x < <span class="number">10</span>:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
     <p>Для такого рода условий <code>Python</code> предоставляет более краткий вариант записи:</p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> < x < <span class="number">10</span>:
+<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> < x < <span
+            class="number">10</span>:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
     <p class="font-semibold underline mt-4">Пример</p>
     <p>Даны три целых числа <code>a, b, c</code>. Выведите YES, если среди них есть хотя бы одно четное и хотя бы
       одно нечетное. В противном случае выведите NO.</p>
     <pre><code>
-<span class="line-number">1</span>a, b, c = <span class="function">map</span>(<span class="function">int</span>, <span class="function">input</span>().<span class="method">split</span>())
+<span class="line-number">1</span>a, b, c = <span class="function">map</span>(<span class="function">int</span>, <span
+            class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">2</span>a1 = a % <span class="number">2</span>
 <span class="line-number">3</span>b1 = b % <span class="number">2</span>
 <span class="line-number">4</span>c1 = c % <span class="number">2</span>
-<span class="line-number">5</span><span class="statement">if</span> a1 + b1 == <span class="number">1</span> <span class="statement">or</span> b1 + c1 == <span class="number">1</span> <span class="statement">or</span> c1 + a1 == <span class="number">1</span>:
+<span class="line-number">5</span><span class="statement">if</span> a1 + b1 == <span class="number">1</span> <span
+            class="statement">or</span> b1 + c1 == <span class="number">1</span> <span class="statement">or</span> c1 + a1 == <span
+            class="number">1</span>:
 <span class="line-number">6</span><span class="function tab1">print</span>(<span class="string">f"YES"</span>)
 <span class="line-number">7</span><span class="statement">else</span>:
-<span class="line-number">8</span><span class="function tab1">print</span>(<span class="string">f"NO"</span>)</code></pre>
+<span class="line-number">8</span><span class="function tab1">print</span>(<span
+            class="string">f"NO"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>1 2 3
 <span class="line-number">>>></span>YES
@@ -430,19 +454,19 @@
 <span class="line-number">>>></span>2 4 6
 <span class="line-number">>>></span>NO</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46127/enter" class="block-link" target="_blank">
-        <span class="w-full">Практические задания</span>
-        <svg
-            aria-hidden="true"
-            class="w-6 h-6 ml-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+      <span class="w-full">Практические задания</span>
+      <svg
+              aria-hidden="true"
+              class="w-6 h-6 ml-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+        <path
+                fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
               110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-          </path>
-        </svg>
+        </path>
+      </svg>
     </a>
   </main>
   <aside class="sidebar">

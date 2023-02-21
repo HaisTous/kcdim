@@ -45,6 +45,9 @@
         @apply text-fuchsia-600
         dark:text-fuchsia-400;
     }
+    .comment {
+        @apply text-gray-500;
+    }
     .tab1 {
         @apply ml-8;
     }
