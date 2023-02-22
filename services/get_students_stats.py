@@ -22,6 +22,11 @@ CONTESTS = [
         'name': 'Условный оператор',
         'href': 'topics/condition.html',
     },
+    {
+        'id': (46846,),
+        'name': 'Операторы цикла',
+        'href': 'topics/loops.html',
+    },
 ]
 
 
