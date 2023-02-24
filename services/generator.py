@@ -4,7 +4,6 @@ from random import randint, uniform
 from shutil import rmtree
 from zipfile import ZipFile
 
-
 EN_UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 EN_LOWER = 'abcdefghijklmnopqrstuvwxyz'
 RU_UPPER = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧЩЩЪЫЬЭЮЯ'
@@ -13,7 +12,7 @@ DIGS = '0123456789'
 SYMBOLS = '!@#№$;%^:&?*()_-+=~[]{}'
 
 NUMBER_OF_TESTS = 20
-SAMPLES = ['', '', '']
+SAMPLES = ['']
 
 
 def gen_text(characters: str, min_length: int, max_length: int) -> str:
@@ -26,6 +25,16 @@ def gen_text(characters: str, min_length: int, max_length: int) -> str:
         text += characters[i]
 
     return text
+
+
+def gen_list_of_numbers(length: int, min_value: int, max_value: int) -> str:
+    """Генерация списка чисел"""
+
+    s = ""
+    for _ in range(length):
+        x = randint(min_value, max_value)
+        s += f"{x} "
+    return s[:-1]
 
 
 def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
