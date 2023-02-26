@@ -27,14 +27,34 @@ def gen_text(characters: str, min_length: int, max_length: int) -> str:
     return text
 
 
-def gen_list_of_numbers(length: int, min_value: int, max_value: int) -> str:
+def gen_list_of_numbers(length: int, min_value: int, max_value: int, inline=True) -> str:
     """Генерация списка чисел"""
 
-    s = ""
+    s = list()
     for _ in range(length):
         x = randint(min_value, max_value)
-        s += f"{x} "
-    return s[:-1]
+        s.append(f"{x}")
+
+    if inline:
+        return ' '.join(s)
+    return '\n'.join(s)
+
+
+def gen_set_of_numbers(length: int, min_value: int, max_value: int, inline=True) -> str:
+    """Генерация множества чисел"""
+
+    s = set()
+    while length:
+        x = str(randint(min_value, max_value))
+        if x in s:
+            continue
+
+        s.add(f"{x}")
+        length -= 1
+
+    if inline:
+        return ' '.join(s)
+    return '\n'.join(s)
 
 
 def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
