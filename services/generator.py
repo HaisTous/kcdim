@@ -12,7 +12,7 @@ DIGS = '0123456789'
 SYMBOLS = '!@#№$;%^:&?*()_-+=~[]{}'
 
 NUMBER_OF_TESTS = 20
-SAMPLES = ['']
+SAMPLES = ['', '', '']
 
 
 def gen_text(characters: str, min_length: int, max_length: int) -> str:
@@ -27,7 +27,7 @@ def gen_text(characters: str, min_length: int, max_length: int) -> str:
     return text
 
 
-def gen_list_of_numbers(length: int, min_value: int, max_value: int, inline=True) -> str:
+def gen_list_of_numbers(length: int, min_value: int, max_value: int) -> list[str]:
     """Генерация списка чисел"""
 
     s = list()
@@ -35,26 +35,22 @@ def gen_list_of_numbers(length: int, min_value: int, max_value: int, inline=True
         x = randint(min_value, max_value)
         s.append(f"{x}")
 
-    if inline:
-        return ' '.join(s)
-    return '\n'.join(s)
+    return s
 
 
-def gen_set_of_numbers(length: int, min_value: int, max_value: int, inline=True) -> str:
+def gen_set_of_numbers(length: int, min_value: int, max_value: int) -> set[str]:
     """Генерация множества чисел"""
 
     s = set()
     while length:
-        x = str(randint(min_value, max_value))
+        x = randint(min_value, max_value)
         if x in s:
             continue
 
         s.add(f"{x}")
         length -= 1
 
-    if inline:
-        return ' '.join(s)
-    return '\n'.join(s)
+    return s
 
 
 def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
