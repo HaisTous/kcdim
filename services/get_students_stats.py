@@ -23,7 +23,7 @@ CONTESTS = [
         'href': 'topics/condition.html',
     },
     {
-        'id': (46846,),
+        'id': (46846, 46990),
         'name': 'Операторы цикла',
         'href': 'topics/loops.html',
     },
