@@ -11,8 +11,8 @@ RU_LOWER = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 DIGS = '0123456789'
 SYMBOLS = '!@#№$;%^:&?*()_-+=~[]{}'
 
-NUMBER_OF_TESTS = 20
-SAMPLES = ['', '', '']
+NUMBER_OF_TESTS = 50
+SAMPLES = ['']
 
 
 def gen_text(characters: str, min_length: int, max_length: int) -> str:
@@ -27,12 +27,15 @@ def gen_text(characters: str, min_length: int, max_length: int) -> str:
     return text
 
 
-def gen_list_of_numbers(length: int, min_value: int, max_value: int) -> list[str]:
+def gen_list_of_numbers(length: int, min_value: int, max_value: int, types: str) -> list[str]:
     """Генерация списка чисел"""
 
     s = list()
     for _ in range(length):
-        x = randint(min_value, max_value)
+        if types == "int":
+            x = randint(min_value, max_value)
+        elif types == "float":
+            x = uniform(min_value, max_value)
         s.append(f"{x}")
 
     return s
