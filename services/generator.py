@@ -11,8 +11,8 @@ RU_LOWER = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 DIGS = '0123456789'
 SYMBOLS = '!@#№$;%^:&?*()_-+=~[]{}'
 
-NUMBER_OF_TESTS = 50
-SAMPLES = ['']
+NUMBER_OF_TESTS = 2
+SAMPLES = ['4 3\n1 1 1\n2 2 2\n3 3 4\n4 4 4\n1 2', '4 3\n1 1 1\n2 2 2\n3 3 4\n4 5 4\n1 2']
 
 
 def gen_text(characters: str, min_length: int, max_length: int) -> str:
@@ -61,7 +61,7 @@ def gen_input_data(number_of_tests: int, samples: list[str]) -> list[str]:
 
     tests = samples[:]
 
-    while len(tests) < number_of_tests:
+    while len(tests) < number_of_tests :
         test = f""
         if test not in tests:
             tests.append(test)
@@ -84,7 +84,9 @@ def gen_output_data(input_data: list[str]) -> list[str]:
 def solution(input_test: list[str]) -> str:
     """Решение задачи"""
 
-    output_test = f""
+    n = int(input_test.pop(0))
+    m = int(input_test.pop(0))
+    output_test = f"{n} {m}"
 
     print(f"{input_test = }\t{output_test = }\n{'-' * 100}")
 
