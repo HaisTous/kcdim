@@ -1,3 +1,4 @@
+import shutil
 from csv import DictReader
 from datetime import datetime as dt
 import webbrowser
@@ -42,13 +43,15 @@ def download_contests(contests: list) -> None:
 
 
 def move_files(contests: list) -> None:
+    src = f'C:/Users/vlad1/Desktop/'
+    dest = f'C:/Programming/Projects/kcdim/services/standings/'
+    if os.path.exists(dest):
+        shutil.rmtree(dest)
+    os.mkdir(dest)
     for contest in contests:
         for ids in contest['id']:
-            src = f'C:/Users/Pikun/Desktop/standings-{ids}.csv'
-            dest = f'D:/Programming/Projects/kcdim/services/standings/standings-{ids}.csv'
-            sleep(1)
-
-            os.rename(src, dest)
+            filename = f'standings-{ids}.csv'
+            os.rename(src + filename, dest + filename)
 
 
 def get_students(contests: list[dict]) -> dict:
