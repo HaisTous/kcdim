@@ -1,5 +1,8 @@
 from csv import DictReader
 from datetime import datetime as dt
+import webbrowser
+from time import sleep
+import os
 
 CONTESTS = [
     {
@@ -28,6 +31,24 @@ CONTESTS = [
         'href': 'topics/loops.html',
     },
 ]
+
+
+def download_contests(contests: list) -> None:
+    for contest in contests:
+        for ids in contest['id']:
+            url = f"https://admin.contest.yandex.ru/api/contest/{ids}/monitor/csv"
+            webbrowser.open(url)
+            sleep(0.7)
+
+
+def move_files(contests: list) -> None:
+    for contest in contests:
+        for ids in contest['id']:
+            src = f'C:/Users/Pikun/Desktop/standings-{ids}.csv'
+            dest = f'D:/Programming/Projects/kcdim/services/standings/standings-{ids}.csv'
+            sleep(1)
+
+            os.rename(src, dest)
 
 
 def get_students(contests: list[dict]) -> dict:
@@ -130,6 +151,8 @@ def write(text: str) -> None:
 
 
 def main() -> None:
+    download_contests(CONTESTS)
+    move_files(CONTESTS)
     students = get_students(CONTESTS)
 
     students = update_results(students, CONTESTS)
