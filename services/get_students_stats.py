@@ -35,23 +35,29 @@ CONTESTS = [
 
 
 def download_contests(contests: list) -> None:
+    """Скачивание результатов соревнований с Яндекс-Контеста"""
+
     for contest in contests:
         for ids in contest['id']:
             url = f"https://admin.contest.yandex.ru/api/contest/{ids}/monitor/csv"
             webbrowser.open(url)
-            sleep(0.7)
+            sleep(0.5)
 
 
 def move_files(contests: list) -> None:
-    src = f'C:/Users/vlad1/Desktop/'
-    dest = f'C:/Programming/Projects/kcdim/services/standings/'
+    """Перемещение контестов в папку с проектом"""
+
+    src = os.path.expanduser('~') + '\\Desktop\\'
+    dest = os.path.abspath(os.curdir) + '\\standings\\'
+
     if os.path.exists(dest):
         shutil.rmtree(dest)
     os.mkdir(dest)
+
     for contest in contests:
         for ids in contest['id']:
             filename = f'standings-{ids}.csv'
-            os.rename(src + filename, dest + filename)
+            shutil.move(src + filename, dest + filename)
 
 
 def get_students(contests: list[dict]) -> dict:
