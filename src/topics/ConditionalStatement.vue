@@ -1,74 +1,4 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/x-icon" href="../img/logo.svg">
-  <link rel="stylesheet" href="../css/output.css">
-  <script defer src="../js/color-theme.js"></script>
-  <script defer src="../js/nav.js"></script>
-  <title>Условный оператор</title>
-</head>
-<body>
-<header>
-  <div class="header">
-    <a href="../index.html" class="logo group">
-      <img src="../img/logo.svg" alt="Логотип">
-      <div class="group-hover:text-red-500 logo__header">
-        <h1>Компьютерный центр г. Светлогорска</h1>
-        <p>Спортивное программирование</p>
-      </div>
-    </a>
-    <nav class="menu">
-      <ul>
-        <li>
-          <a href="../topics.html" aria-current="page">Темы</a>
-        </li>
-        <li>
-          <a href="../students.html">Учащиеся</a>
-        </li>
-        <li>
-          <a href="../events.html">Олимпиады</a>
-        </li>
-        <li>
-          <a href="../links.html">Ссылки</a>
-        </li>
-      </ul>
-    </nav>
-    <button id="theme-toggle" type="button" class="btn-no-bg">
-      <svg
-              aria-hidden="true"
-              id="theme-toggle-dark-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-      </svg>
-      <svg
-              aria-hidden="true"
-              id="theme-toggle-light-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464
-            4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0
-            010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1
-            1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465
-            5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1
-            1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                fill-rule="evenodd"
-                clip-rule="evenodd">
-        </path>
-      </svg>
-    </button>
-  </div>
-</header>
-<div class="container">
+<template>
   <main>
     <h2 class="title section" data-section="conditional-operator" id="conditional-operator">Условный оператор</h2>
     <p><span class="font-semibold italic">Логическим</span> (булевым) называется выражение, которое может быть
@@ -106,13 +36,13 @@
           </td>
         </tr>
         <tr>
-          <td><</td>
-          <td><</td>
+          <td>&lt;</td>
+          <td>&lt;</td>
           <td>Меньше</td>
           <td class="whitespace-nowrap">
-            <code>-1 < 1 - True</code>
+            <code>-1 &lt; 1 - True</code>
             <br>
-            <code>8 < 6 - False</code>
+            <code>8 &lt; 6 - False</code>
           </td>
         </tr>
         <tr>
@@ -147,12 +77,12 @@
         </tr>
         <tr>
           <td>≤</td>
-          <td><=</td>
+          <td>&lt;=</td>
           <td>Меньше или равно</td>
           <td class="whitespace-nowrap">
-            <code>-8 <= -7 - True</code>
+            <code>-8 &lt;= -7 - True</code>
             <br>
-            <code>5 <= -5 - False</code>
+            <code>5 &lt;= -5 - False</code>
           </td>
         </tr>
         </tbody>
@@ -171,10 +101,10 @@
     <p>Требуется увеличить число <code>x</code> на 2, если оно неположительное.</p>
     <pre><code>
 <span class="line-number">1</span>x = <span class="function">int</span>(<span class="function">input</span>())
-<span class="line-number">2</span><span class="statement">if</span> x <= <span class="number">0</span>:
+<span class="line-number">2</span><span class="statement">if</span> x &lt;= <span class="number">0</span>:
 <span class="line-number">3</span><span class="tab1">x += </span><span class="number">2</span>
 <span class="line-number">4</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>x<span class="function">}</span><span class="string">"</span>)</code></pre>
+        class="function">{</span>x<span class="function">}</span><span class="string">"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>0
 <span class="line-number">>>></span>2
@@ -183,18 +113,7 @@
 <span class="line-number">>>></span>5</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46059/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
-      <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-        </path>
-      </svg>
+      <icon-right-arrow class="ml-4"/>
     </a>
     <h2 class="title section my-4" data-section="alternative-execution" id="alternative-execution">Альтернативное
       выполнение</h2>
@@ -205,12 +124,12 @@
     </p>
     <pre><code>
 <span class="line-number">1</span><span class="statement">if</span> x % <span class="number">2</span> == <span
-            class="number">0</span>:
+        class="number">0</span>:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span
-            class="string">f"x - чётное число"</span>)
+        class="string">f"x - чётное число"</span>)
 <span class="line-number">3</span><span class="statement">else</span>:
 <span class="line-number">4</span><span class="function tab1">print</span>(<span
-            class="string">f"x - нечётное число"</span>)</code></pre>
+        class="string">f"x - нечётное число"</span>)</code></pre>
     <p>Если остаток от деления <code>x</code> на <code>2</code> равен <code>0</code>, то мы знаем, что <code>x</code> —
       четное число, и программа отображает соответствующее сообщение. Если условие ложно, выполняется второй набор
       инструкций. Поскольку условие может быть либо истинным, либо ложным, будет выполнена ровно одна из альтернатив.
@@ -220,12 +139,12 @@
     <p>Выведите YES в том случае, если <code>a + b = c</code> и выведите NO в противном случае.</p>
     <pre><code>
 <span class="line-number">1</span>a, b, c = <span class="function">map</span>(<span class="function">int</span>, <span
-            class="function">input</span>().<span class="method">split</span>())
+        class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">2</span><span class="statement">if</span> a + b == c:
 <span class="line-number">3</span><span class="function tab1">print</span>(<span class="string">f"YES"</span>)
 <span class="line-number">4</span><span class="statement">else</span>:
 <span class="line-number">5</span><span class="function tab1">print</span>(<span
-            class="string">f"NO"</span>)</code></pre>
+        class="string">f"NO"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>1 2 3
 <span class="line-number">>>></span>YES
@@ -234,33 +153,22 @@
 <span class="line-number">>>></span>NO</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46125/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
-      <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-        </path>
-      </svg>
+      <icon-right-arrow class="ml-4"/>
     </a>
     <h2 class="title section my-4" data-section="сhained-conditionals" id="сhained-conditionals">Связанные условия</h2>
     <p>Иногда существует более двух возможностей и требуется более двух ветвей. Один из способов выразить подобное
       вычисление — использовать <span class="font-semibold">связанные условия</span>:
     </p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> x < y:
+<span class="line-number">1</span><span class="statement">if</span> x &lt; y:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span
-            class="string">f"x меньше, чем y"</span>)
+        class="string">f"x меньше, чем y"</span>)
 <span class="line-number">3</span><span class="statement">elif</span> x > y:
 <span class="line-number">4</span><span class="function tab1">print</span>(<span
-            class="string">f"x больше, чем y"</span>)
+        class="string">f"x больше, чем y"</span>)
 <span class="line-number">5</span><span class="statement">else</span>:
 <span class="line-number">6</span><span class="function tab1">print</span>(<span
-            class="string">f"x и y равны"</span>)</code></pre>
+        class="string">f"x и y равны"</span>)</code></pre>
     <p><code class="statement">elif</code> — это аббревиатура для "<code class="statement">else if</code>". Выполняться
       будет только одна ветвь. Ограничений на количество инструкций <code class="statement">elif</code> нет.
       Инструкция <code class="statement">else</code> должна быть указана в конце.</p>
@@ -279,14 +187,14 @@
       следует вывести «DRAW».</p>
     <pre><code>
 <span class="line-number">1</span>a1, b1 = <span class="function">map</span>(<span class="function">int</span>, <span
-            class="function">input</span>().<span class="method">split</span>())
+        class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">2</span>a2, b2 = <span class="function">map</span>(<span class="function">int</span>, <span
-            class="function">input</span>().<span class="method">split</span>())
+        class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">3</span>a = a1 + a2
 <span class="line-number">4</span>b = b1 + b2
 <span class="line-number">5</span><span class="statement">if</span> a > b:
 <span class="line-number">6</span><span class="function tab1">print</span>(<span class="string">f"1"</span>)
-<span class="line-number">7</span><span class="statement">elif</span> a < b:
+<span class="line-number">7</span><span class="statement">elif</span> a &lt; b:
 <span class="line-number">8</span><span class="function tab1">print</span>(<span class="string">f"2"</span>)
 <span class="line-number">9</span><span class="statement">else</span>:
 <span class="line-number">10</span><span class="function tab1">print</span>(<span class="string">f"DRAW"</span>)</code></pre>
@@ -304,18 +212,7 @@
 <span class="line-number">>>></span>DRAW</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46126/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
-      <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-        </path>
-      </svg>
+      <icon-right-arrow class="ml-4"/>
     </a>
     <h2 class="title section my-4" data-section="nested-conditionals" id="nested-conditionals">Вложенные условия</h2>
     <p>Одно условие также может быть вложено в другое. Мы могли бы переписать пример из предыдущего раздела
@@ -324,25 +221,25 @@
 <span class="line-number">1</span><span class="statement">if</span> x == y:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x и y равны"</span>)
 <span class="line-number">3</span><span class="statement">else</span>:
-<span class="line-number">4</span><span class="statement tab1">if</span> x < y:
+<span class="line-number">4</span><span class="statement tab1">if</span> x &lt; y:
 <span class="line-number">5</span><span class="function tab2">print</span>(<span
-            class="string">f"x меньше, чем y"</span>)
+        class="string">f"x меньше, чем y"</span>)
 <span class="line-number">6</span><span class="statement tab1">else</span>:
 <span class="line-number">7</span><span class="function tab2">print</span>(<span
-            class="string">f"x больше, чем y"</span>)</code></pre>
+        class="string">f"x больше, чем y"</span>)</code></pre>
     <p>Внешняя условная инструкция содержит две ветви. Первая ветвь содержит обычную инструкцию. Вторая ветвь содержит
       еще одну инструкцию <code class="statement">if</code>, у которой две собственные ветви. Эти две ветви — простые
       инструкции. Разумеется, они могли бы быть так же и условными операторами.</p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> < x:
-<span class="line-number">2</span><span class="statement tab1">if</span> x < <span class="number">10</span>:
+<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> &lt; x:
+<span class="line-number">2</span><span class="statement tab1">if</span> x &lt; <span class="number">10</span>:
 <span class="line-number">3</span><span class="function tab2">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
     <p>Несмотря на то что отступы инструкций позволяют разглядеть структуру, <span class="font-semibold">
       вложенные условные инструкции</span> очень трудно прочитать с ходу. Поэтому рекомендуется их избегать.</p>
     <h2 class="title section my-4" data-section="logical-operators" id="logical-operators">Логические операторы</h2>
     <p>Существует три <span class="font-semibold">логических оператора</span>: <code>not</code>, <code>and</code> и
       <code>or</code>. Значение этих операторов аналогично значению этих слов в английском языке.</p>
-    <p class="mt-4">Например, <code>x > 0 and x < 10</code> истинно, только если <code>x</code> больше <code>0</code>
+    <p class="mt-4">Например, <code>x > 0 and x &lt; 10</code> истинно, только если <code>x</code> больше <code>0</code>
       и меньше <code>10</code>.</p>
     <p class="mt-4"><code>n % 2 == 0 or n % 3 == 0</code> истинно, если выполняется одно или оба условия, то есть
       если число делится на <code>2</code> или на <code>3</code> без остатка.</p>
@@ -423,30 +320,30 @@
     <p>Логические операторы часто предоставляют способ упростить набор вложенных условных инструкций. Например, мы
       можем переписать предыдущий код, используя всего одно условие и логический оператор <code>and</code>:</p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> x < <span class="number">0</span> <span
-            class="statement">and</span> x < <span class="number">10</span>:
+<span class="line-number">1</span><span class="statement">if</span> x &lt; <span class="number">0</span> <span
+        class="statement">and</span> x &lt; <span class="number">10</span>:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
     <p>Для такого рода условий <code>Python</code> предоставляет более краткий вариант записи:</p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> < x < <span
-            class="number">10</span>:
+<span class="line-number">1</span><span class="statement">if</span> <span class="number">0</span> &lt; x &lt; <span
+        class="number">10</span>:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"x - положительное однозначное число"</span>)</code></pre>
     <p class="font-semibold underline mt-4">Пример</p>
     <p>Даны три целых числа <code>a, b, c</code>. Выведите YES, если среди них есть хотя бы одно четное и хотя бы
       одно нечетное. В противном случае выведите NO.</p>
     <pre><code>
 <span class="line-number">1</span>a, b, c = <span class="function">map</span>(<span class="function">int</span>, <span
-            class="function">input</span>().<span class="method">split</span>())
+        class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">2</span>a1 = a % <span class="number">2</span>
 <span class="line-number">3</span>b1 = b % <span class="number">2</span>
 <span class="line-number">4</span>c1 = c % <span class="number">2</span>
 <span class="line-number">5</span><span class="statement">if</span> a1 + b1 == <span class="number">1</span> <span
-            class="statement">or</span> b1 + c1 == <span class="number">1</span> <span class="statement">or</span> c1 + a1 == <span
-            class="number">1</span>:
+        class="statement">or</span> b1 + c1 == <span class="number">1</span> <span class="statement">or</span> c1 + a1 == <span
+        class="number">1</span>:
 <span class="line-number">6</span><span class="function tab1">print</span>(<span class="string">f"YES"</span>)
 <span class="line-number">7</span><span class="statement">else</span>:
 <span class="line-number">8</span><span class="function tab1">print</span>(<span
-            class="string">f"NO"</span>)</code></pre>
+        class="string">f"NO"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>1 2 3
 <span class="line-number">>>></span>YES
@@ -455,48 +352,35 @@
 <span class="line-number">>>></span>NO</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46127/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
-      <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-        </path>
-      </svg>
+      <icon-right-arrow class="ml-4"/>
     </a>
   </main>
-  <aside class="sidebar">
-    <h3>На этой странице</h3>
-    <nav class="sidebar-nav">
-      <ul>
-        <li data-section="conditional-operator" class="sidebar-nav__li sidebar-nav__active">
-          <a href="#conditional-operator">Условный оператор</a>
-        </li>
-        <li data-section="comparison-operators" class="sidebar-nav__li">
-          <a href="#comparison-operators">Операторы сравнения</a>
-        </li>
-        <li data-section="сonditional-execution" class="sidebar-nav__li">
-          <a href="#сonditional-execution">Условное выполнение</a>
-        </li>
-        <li data-section="alternative-execution" class="sidebar-nav__li">
-          <a href="#alternative-execution">Альтернативное выполнение</a>
-        </li>
-        <li data-section="сhained-conditionals" class="sidebar-nav__li">
-          <a href="#сhained-conditionals">Связанные условия</a>
-        </li>
-        <li data-section="nested-conditionals" class="sidebar-nav__li">
-          <a href="#nested-conditionals">Вложенные условия</a>
-        </li>
-        <li data-section="logical-operators" class="sidebar-nav__li">
-          <a href="#logical-operators">Логические операторы</a>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-</div>
-</body>
-</html>
+  <side-bar :sections="sections"/>
+</template>
+
+<script>
+import SideBar from "@/components/SideBar.vue";
+import IconRightArrow from "@/components/icons/IconRightArrow.vue";
+
+export default {
+  name: "ConditionalStatement",
+  components: {IconRightArrow, SideBar},
+  data() {
+    return {
+      sections: [
+        {id: 1, name: 'Условный оператор', link: 'conditional-operator'},
+        {id: 2, name: 'Операторы сравнения', link: 'comparison-operators'},
+        {id: 3, name: 'Условное выполнение', link: 'сonditional-execution'},
+        {id: 4, name: 'Альтернативное выполнение', link: 'alternative-execution'},
+        {id: 5, name: 'Связанные условия', link: 'сhained-conditionals'},
+        {id: 6, name: 'Вложенные условия', link: 'nested-conditionals'},
+        {id: 7, name: 'Логические операторы', link: 'logical-operators'},
+      ]
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>

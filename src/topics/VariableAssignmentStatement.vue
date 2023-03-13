@@ -1,73 +1,4 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/x-icon" href="../img/logo.svg">
-  <link rel="stylesheet" href="../css/output.css">
-  <script defer src="../js/color-theme.js"></script>
-  <title>Вывод данных</title>
-</head>
-<body>
-<header>
-  <div class="header">
-    <a href="../index.html" class="logo group">
-      <img src="../img/logo.svg" alt="Логотип">
-      <div class="group-hover:text-red-500 logo__header">
-        <h1>Компьютерный центр г. Светлогорска</h1>
-        <p>Спортивное программирование</p>
-      </div>
-    </a>
-    <nav class="menu">
-      <ul>
-        <li>
-          <a href="../topics.html" aria-current="page">Темы</a>
-        </li>
-        <li>
-          <a href="../students.html">Учащиеся</a>
-        </li>
-        <li>
-          <a href="../events.html">Олимпиады</a>
-        </li>
-        <li>
-          <a href="../links.html">Ссылки</a>
-        </li>
-      </ul>
-    </nav>
-    <button id="theme-toggle" type="button" class="btn-no-bg">
-      <svg
-              aria-hidden="true"
-              id="theme-toggle-dark-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-      </svg>
-      <svg
-              aria-hidden="true"
-              id="theme-toggle-light-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464
-            4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0
-            010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1
-            1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465
-            5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1
-            1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                fill-rule="evenodd"
-                clip-rule="evenodd">
-        </path>
-      </svg>
-    </button>
-  </div>
-</header>
-<div class="container">
+<template>
   <main>
     <h2 class="title">Вывод данных</h2>
     <p>Инструкция печати <code class="function">print</code> отображает результат на экране. На языке Python программа
@@ -88,8 +19,8 @@
 <span class="line-number">1</span>name = <span class="string">"Дмитрий"</span>
 <span class="line-number">2</span>age = <span class="number">13</span>
 <span class="line-number">3</span><span class="function">print</span>(<span class="string">f"Меня зовут </span><span
-            class="function">{</span>name<span class="function">}</span><span class="string">. Мне</span> <span
-            class="function">{</span>age<span class="function">}</span><span class="string"> лет."</span>)</code></pre>
+        class="function">{</span>name<span class="function">}</span><span class="string">. Мне</span> <span
+        class="function">{</span>age<span class="function">}</span><span class="string"> лет."</span>)</code></pre>
     <p>Результат:</p>
     <pre><code>
 <span class="line-number">>>></span>Меня зовут Дмитрий. Мне 13 лет.</code></pre>
@@ -97,10 +28,10 @@
     <pre><code>
 <span class="line-number">1</span>a = <span class="number">1.56789</span>
 <span class="line-number">2</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>a<span class="function">}</span><span class="string">"</span>)
+        class="function">{</span>a<span class="function">}</span><span class="string">"</span>)
 <span class="line-number">3</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>a<span class="function">:</span><span class="string">.2f</span><span
-            class="function">}</span><span class="string">"</span>)</code></pre>
+        class="function">{</span>a<span class="function">:</span><span class="string">.2f</span><span
+        class="function">}</span><span class="string">"</span>)</code></pre>
     <p>Результат:</p>
     <pre><code>
 <span class="line-number">>>></span>1.56789
@@ -111,26 +42,33 @@
     <p>Требуется вывести надпись: <code>The bird's tail</code>.</p>
     <pre><code>
 <span class="line-number">1</span><span class="function">print</span>(<span
-            class="string">f"The bird's tail"</span>)</code></pre>
+        class="string">f"The bird's tail"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>The bird's tail</code></pre>
     <a href="https://official.contest.yandex.ru/contest/45316/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
       <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
+          aria-hidden="true"
+          class="w-6 h-6 ml-3"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
         <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+            fill-rule="evenodd"
+            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
               110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
         </path>
       </svg>
     </a>
   </main>
+</template>
 
-</div>
-</body>
-</html>
+<script>
+export default {
+  name: "VariableAssignmentStatement"
+}
+</script>
+
+<style scoped>
+
+</style>

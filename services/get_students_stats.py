@@ -122,33 +122,29 @@ def get_current_datetime() -> str:
     return f"{day} {month} {year} года в {time}"
 
 
-def generate_html(students: dict) -> str:
+def generate_data(students: dict) -> str:
     """Генерация html-файла со списком учащихся"""
 
     datetime = get_current_datetime()
 
-    html = f'<main>\n<h2 class="title">Список учащихся</h2>\n' \
-           f'<p class="updated_date">Последнее обновление: {datetime}</p>\n' \
-           f'<div class="stripped-table">\n' \
-           f'<table>\n<thead>\n<tr>\n<th scope="col">#</th>\n' \
-           f'<th scope="col" class="text-left">Учащийся</th>\n' \
+    data = "data() {\n" \
+           "return {\n"\
+           f"date: '{datetime}',\n"
 
+    data += f"topics: [\n"
     for number, contest in enumerate(CONTESTS):
-        html += f'<th scope="col">\n' \
-                f'<a href="{contest["href"]}" class="tooltip group">{number + 1}\n' \
-                f'<span class="tooltiptext group-hover:visible group-hover:opacity-100">{contest["name"]}</span>\n' \
-                f'</a>\n</th>\n'
+        data += "{'id': " + f"{number + 1}, 'link': '{contest['href']}', 'name': '{contest['name']}'" + "},\n"
+    data += f"],\n"
 
-    html += f'<th scope="col">Всего</th>\n</tr>\n</thead>\n<tbody>'
-
+    data += f"students: [\n"
     for number, student in enumerate(students):
-        html += f'<tr>\n<td>{number + 1}</td>\n' \
-                f'<th scope="row" class="name">{student}</th>\n'
+        data += "{'id': " + f"{number + 1}, 'name': '{student}', 'scores': ["
         for score in students[student]:
-            html += f'<td>{score}</td>\n'
-        html += f'<td>{sum(map(int, students[student]))}</td>\n'
-    html += '</tbody>\n</table>\n</div>\n</main>'
-    return html
+            data += f"{score},"
+        data += f"], 'totalScore': {sum(map(int, students[student]))}" + '},\n'
+    data += "],\n}\n},"
+
+    return data
 
 
 def write(text: str) -> None:
@@ -167,8 +163,8 @@ def main() -> None:
     students = update_results(students, CONTESTS)
     students = dict(sorted(students.items(), key=lambda x: sum(map(int, x[1])), reverse=True))
 
-    html = generate_html(students)
-    write(html)
+    data = generate_data(students)
+    write(data)
 
 
 if __name__ == '__main__':

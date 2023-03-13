@@ -1,74 +1,4 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" type="image/x-icon" href="../img/logo.svg">
-  <link rel="stylesheet" href="../css/output.css">
-  <script defer src="../js/color-theme.js"></script>
-  <script defer src="../js/nav.js"></script>
-  <title>Операторы цикла</title>
-</head>
-<body>
-<header>
-  <div class="header">
-    <a href="../index.html" class="logo group">
-      <img src="../img/logo.svg" alt="Логотип">
-      <div class="group-hover:text-red-500 logo__header">
-        <h1>Компьютерный центр г. Светлогорска</h1>
-        <p>Спортивное программирование</p>
-      </div>
-    </a>
-    <nav class="menu">
-      <ul>
-        <li>
-          <a href="../topics.html" aria-current="page">Темы</a>
-        </li>
-        <li>
-          <a href="../students.html">Учащиеся</a>
-        </li>
-        <li>
-          <a href="../events.html">Олимпиады</a>
-        </li>
-        <li>
-          <a href="../links.html">Ссылки</a>
-        </li>
-      </ul>
-    </nav>
-    <button id="theme-toggle" type="button" class="btn-no-bg">
-      <svg
-              aria-hidden="true"
-              id="theme-toggle-dark-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-      </svg>
-      <svg
-              aria-hidden="true"
-              id="theme-toggle-light-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464
-            4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0
-            010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1
-            1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465
-            5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1
-            1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                fill-rule="evenodd"
-                clip-rule="evenodd">
-        </path>
-      </svg>
-    </button>
-  </div>
-</header>
-<div class="container">
+<template>
   <main>
     <h2 class="title section" data-section="loops" id="loops">Операторы цикла</h2>
     <p>При написании программ зачастую встаёт задача сделать однотипное действие много раз. Например, перебрать все
@@ -79,20 +9,20 @@
     <p class="mt-4">Выглядит он так:</p>
     <pre><code>
 <span class="line-number">1</span><span class="statement">for</span> ‹переменная-счётчик› <span
-            class="statement">in</span> <span class="function">range</span>(‹начало›, ‹конец›, ‹шаг›):
+        class="statement">in</span> <span class="function">range</span>(‹начало›, ‹конец›, ‹шаг›):
 <span class="line-number">2</span><span class="comment tab1"># тело цикла</span></code></pre>
     <p>Давайте разберёмся, что означает каждая часть, на примере. Цикл ниже выполняет
       <code><span class="function">print</span>(<span class="string">f"</span><span class="function">{</span>i<span
-              class="function">}</span><span class="string">"</span>)</code> для <code>i</code> от <code>0</code> до (но
+          class="function">}</span><span class="string">"</span>)</code> для <code>i</code> от <code>0</code> до (но
       не включая)
       <code>3</code>:</p>
     <pre><code>
 <span class="line-number">1</span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">0</span>, <span class="number">3</span>, <span
-            class="number">1</span>):
+        class="function">range</span>(<span class="number">0</span>, <span class="number">3</span>, <span
+        class="number">1</span>):
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)</code></pre>
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>0
 <span class="line-number">>>></span>1
@@ -111,83 +41,72 @@
     <pre><code>
 <span class="line-number">1</span>i = <span class="number">0</span>
 <span class="line-number">2</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)
 <span class="line-number">3</span>i += <span class="number">1</span>
 <span class="line-number">4</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)
 <span class="line-number">5</span>i += <span class="number">1</span>
 <span class="line-number">6</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)</code></pre>
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)</code></pre>
     <p>Выходит, цикл избавил от необходимости писать четыре дополнительных строк кода. Хорошие программисты терпеть не
       могут делать одно и то же несколько раз, поэтому цикл — одна из самых популярных программных конструкций.</p>
     <h2 class="title my-4">Примеры функции range()</h2>
     <pre><code>
 <span class="line-number">>>></span><span class="comment"># 5 чисел, начиная с 0</span>
 <span class="line-number">>>></span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">5</span>):
+        class="function">range</span>(<span class="number">5</span>):
 <span class="line-number">>>></span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
-            class="number">end</span>=<span class="string">" "</span>)
+        class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
+        class="number">end</span>=<span class="string">" "</span>)
 <span class="line-number">>>></span>0 1 2 3 4
 <span class="line-number">>>></span>
 <span class="line-number">>>></span><span class="comment"># числа от 3 до 6 (не включительно)</span>
 <span class="line-number">>>></span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">3</span>, <span class="number">6</span>):
+        class="function">range</span>(<span class="number">3</span>, <span class="number">6</span>):
 <span class="line-number">>>></span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
-            class="number">end</span>=<span class="string">" "</span>)
+        class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
+        class="number">end</span>=<span class="string">" "</span>)
 <span class="line-number">>>></span>3 4 5
 <span class="line-number">>>></span>
 <span class="line-number">>>></span><span class="comment"># числа от 1 до 10 (не включительно) с шагом 2</span>
 <span class="line-number">>>></span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">1</span>, <span class="number">10</span>, <span
-            class="number">2</span>):
+        class="function">range</span>(<span class="number">1</span>, <span class="number">10</span>, <span
+        class="number">2</span>):
 <span class="line-number">>>></span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
-            class="number">end</span>=<span class="string">" "</span>)
+        class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
+        class="number">end</span>=<span class="string">" "</span>)
 <span class="line-number">>>></span>1 3 5 7 9
 <span class="line-number">>>></span>
 <span class="line-number">>>></span><span class="comment"># числа от 0 до -10 (не включительно) с шагом -1</span>
 <span class="line-number">>>></span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">0</span>, <span class="number">-10</span>, <span
-            class="number">-1</span>):
+        class="function">range</span>(<span class="number">0</span>, <span class="number">-10</span>, <span
+        class="number">-1</span>):
 <span class="line-number">>>></span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
-            class="number">end</span>=<span class="string">" "</span>)
+        class="function">{</span>i<span class="function">}</span><span class="string">"</span>, <span
+        class="number">end</span>=<span class="string">" "</span>)
 <span class="line-number">>>></span>0 -1 -2 -3 -4 -5 -6 -7 -8 -9</code></pre>
     <p class="font-semibold underline mt-4">Пример</p>
     <p>Даны два целых числа <code>a, b (a ≤ b)</code>. Выведите сумму всех целых чисел от <code>a</code> до
       <code>b</code>.</p>
     <pre><code>
 <span class="line-number">1</span>a, b = <span class="function">map</span>(<span class="function">int</span>, <span
-            class="function">input</span>().<span class="method">split</span>())
+        class="function">input</span>().<span class="method">split</span>())
 <span class="line-number">2</span>s = <span class="number">0</span>
 <span class="line-number">3</span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(a, b + <span class="number">1</span>):
+        class="function">range</span>(a, b + <span class="number">1</span>):
 <span class="line-number">4</span><span class="tab1">s += i</span>
 <span class="line-number">5</span><span class="function">print</span>(<span class="string">f"</span><span
-            class="function">{</span>s<span
-            class="function">}</span><span class="string">"</span>)</code></pre>
+        class="function">{</span>s<span
+        class="function">}</span><span class="string">"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>1 10
 <span class="line-number">>>></span>55</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46846/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
-      <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-        </path>
-      </svg>
+      <icon-right-arrow class="ml-4"/>
     </a>
     <h2 class="title section my-4" data-section="while-loop" id="while-loop">Цикл while</h2>
     <p>Цикл <code class="statement">for</code> — не единственный вид циклов в языке <code>Python</code>. Есть также цикл
@@ -198,12 +117,12 @@
 <span class="line-number">1</span><span class="statement">while</span> condition:
 <span class="line-number">2</span><span class="comment tab1"># тело цикла</span></code></pre>
     <p>Код из тела цикла выполняется, пока условие <code>condition</code> истинно.</p>
-    <p class="mt-4">Например, цикл ниже выводит <code>i</code>, пока <code>i < 3</code>:</p>
+    <p class="mt-4">Например, цикл ниже выводит <code>i</code>, пока <code>i &lt; 3</code>:</p>
     <pre><code>
-<span class="line-number">1</span><span class="statement">while</span> i < <span class="number">3</span>:
+<span class="line-number">1</span><span class="statement">while</span> i &lt; <span class="number">3</span>:
 <span class="line-number">2</span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)
 <span class="line-number">3</span><span class="tab1">i +=</span> <span class="number">1</span></code></pre>
     <pre><code>
 <span class="line-number">>>></span>0
@@ -217,10 +136,10 @@
     <pre><code>
 <span class="line-number">1</span>x = <span class="function">int</span>(<span class="function">input</span>())
 <span class="line-number">2</span>i = <span class="number">2</span>
-<span class="line-number">3</span><span class="statement">while</span> i <= x:
+<span class="line-number">3</span><span class="statement">while</span> i &lt;= x:
 <span class="line-number">4</span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)
 <span class="line-number">5</span><span class="tab1">i += </span><span class="number">2</span></code></pre>
     <pre><code>
 <span class="line-number">>>></span>6
@@ -229,18 +148,7 @@
 <span class="line-number">>>></span>6</code></pre>
     <a href="https://official.contest.yandex.ru/contest/46990/enter" class="block-link" target="_blank">
       <span class="w-full">Практические задания</span>
-      <svg
-              aria-hidden="true"
-              class="w-6 h-6 ml-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-        <path
-                fill-rule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
-              110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd">
-        </path>
-      </svg>
+      <icon-right-arrow class="ml-4"/>
     </a>
     <h2 class="title section mt-4" data-section="break-statement" id="break-statement">Оператор break</h2>
     <p>Оператор <code class="statement">break</code> служит для досрочного выхода из цикла. Например, для цикла
@@ -248,13 +156,13 @@
     <pre><code>
 <span class="line-number">1</span>age = <span class="number">10</span>
 <span class="line-number">2</span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">1</span>, <span class="number">100</span>):
+        class="function">range</span>(<span class="number">1</span>, <span class="number">100</span>):
 <span class="line-number">3</span><span class="function tab1">print</span>(<span class="string">f"отсчёт </span><span
-            class="function">{</span>i<span
-            class="function">}</span><span class="string">"</span>)
+        class="function">{</span>i<span
+        class="function">}</span><span class="string">"</span>)
 <span class="line-number">4</span><span class="statement tab1">if</span> i == age:
 <span class="line-number">5</span><span class="function tab2">print</span>(<span
-            class="string">f"закончили считать"</span>)
+        class="string">f"закончили считать"</span>)
 <span class="line-number">6</span><span class="statement tab2">break</span></code></pre>
     <pre><code>
 <span class="line-number">>>></span>отсчёт 1
@@ -275,11 +183,11 @@
       <code class="statement">break</code>.</p>
     <pre><code>
 <span class="line-number">1</span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">10</span>, <span class="number">100</span>):
-<span class="line-number">2</span><span class="statement tab1">if</span> <span class="number">-9</span> <= i <= <span
-            class="number">9</span>:
+        class="function">range</span>(<span class="number">10</span>, <span class="number">100</span>):
+<span class="line-number">2</span><span class="statement tab1">if</span> <span class="number">-9</span> &lt;= i &lt;= <span
+        class="number">9</span>:
 <span class="line-number">3</span><span class="function tab2">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span class="string"> - однозначное число"</span>)
+        class="function">{</span>i<span class="function">}</span><span class="string"> - однозначное число"</span>)
 <span class="line-number">4</span><span class="statement tab2">break</span>
 <span class="line-number">4</span><span class="statement">else</span>:
 <span class="line-number">3</span><span class="function tab1">print</span>(<span class="string">f"однозначных чисел в цикле нет"</span>)</code></pre>
@@ -291,15 +199,15 @@
     <p class="mt-4">Оператор используют, если понятно, что на текущем повторе цикла делать больше нечего.</p>
     <pre><code>
 <span class="line-number">1</span><span class="statement">for</span> i <span class="statement">in</span> <span
-            class="function">range</span>(<span class="number">1</span>, <span class="number">16</span>):
+        class="function">range</span>(<span class="number">1</span>, <span class="number">16</span>):
 <span class="line-number">2</span><span class="statement tab1">if</span> i % <span class="number">2</span> == <span
-            class="number">0</span>:
+        class="number">0</span>:
 <span class="line-number">3</span><span class="function tab2">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span class="string"> - чётное число"</span>)
+        class="function">{</span>i<span class="function">}</span><span class="string"> - чётное число"</span>)
 <span class="line-number">4</span><span class="statement tab2">continue</span>
 <span class="line-number">5</span><span class="function tab1">print</span>(<span class="string">f"</span><span
-            class="function">{</span>i<span class="function">}</span><span
-            class="string"> - нечётное число"</span>)</code></pre>
+        class="function">{</span>i<span class="function">}</span><span
+        class="string"> - нечётное число"</span>)</code></pre>
     <pre><code>
 <span class="line-number">>>></span>1 - нечётное число
 <span class="line-number">>>></span>2 - чётное число
@@ -322,28 +230,30 @@
     <p class="mt-4">Оператор <code class="statement">continue</code> можно использовать вместо вложенного условного
       кода или для оптимизации цикла.</p>
   </main>
-  <aside class="sidebar">
-    <h3>На этой странице</h3>
-    <nav class="sidebar-nav">
-      <ul>
-        <li data-section="loops" class="sidebar-nav__li sidebar-nav__active">
-          <a href="#loops">Операторы цикла</a>
-        </li>
-        <li data-section="for-loop" class="sidebar-nav__li">
-          <a href="#for-loop">Цикл for</a>
-        </li>
-        <li data-section="while-loop" class="sidebar-nav__li">
-          <a href="#while-loop">Цикл while</a>
-        </li>
-        <li data-section="break-statement" class="sidebar-nav__li">
-          <a href="#break-statement">Оператор break</a>
-        </li>
-        <li data-section="continue-statement" class="sidebar-nav__li">
-          <a href="#continue-statement">Оператор continue</a>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-</div>
-</body>
-</html>
+  <side-bar :sections="sections"/>
+</template>
+
+<script>
+import SideBar from "@/components/SideBar.vue";
+import IconRightArrow from "@/components/icons/IconRightArrow.vue";
+
+export default {
+  name: "LoopStatement",
+  components: {IconRightArrow, SideBar},
+    data() {
+    return {
+      sections: [
+        {id: 1, name: 'Операторы цикла', link: 'loops'},
+        {id: 2, name: 'Цикл for', link: 'for-loop'},
+        {id: 3, name: 'Цикл while', link: 'while-loop'},
+        {id: 4, name: 'Оператор break', link: 'break-statement'},
+        {id: 5, name: 'Оператор continue', link: 'continue-statement'},
+      ]
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>

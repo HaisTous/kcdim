@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-pt-[4.5rem];
+    }
+
+    body {
+        @apply antialiased bg-gray-200
+        dark:bg-slate-800;
+    }
+
+    header {
+        @apply sticky top-0 py-2 mb-2 border-b-2 z-50 border-gray-200 text-gray-700 bg-gray-100
+        dark:text-gray-300 dark:bg-slate-900 dark:border-slate-700;
+    }
+
+    main {
+        @apply w-full overflow-x-auto rounded-lg px-6 py-3 bg-gray-100 text-gray-700
+        dark:bg-slate-900 dark:text-gray-300;
+    }
+
+    code {
+        @apply font-semibold;
+    }
+
+    pre {
+        @apply text-gray-900 rounded-lg bg-gray-200 my-4 px-2 overflow-x-auto select-none
+        dark:text-gray-100 dark:bg-slate-800 pb-4;
+    }
+
+    ol {
+        @apply list-decimal list-inside space-y-1 text-gray-700
+        dark:text-gray-300;
+    }
+
+    ol a:hover {
+        @apply hover:underline;
+    }
+}
