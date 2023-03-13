@@ -35,7 +35,7 @@ console.log(routes)
 
 
 const router = createRouter({
-    history: createWebHistory('/kcdim-vue/'),
+    history: createWebHistory('/kcdim/'),
     routes,
     scrollBehavior(to, from, savedPosition) {
         return {
