@@ -31,9 +31,6 @@ const routes = [
     {path: '/links', component: Links},
 ]
 
-console.log(routes)
-
-
 const router = createRouter({
     history: createWebHistory('/kcdim/'),
     routes,
