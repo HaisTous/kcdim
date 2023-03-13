@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/kcdim-vue/',
+  base: '/kcdim/',
   plugins: [vue()],
   resolve: {
     alias: {
