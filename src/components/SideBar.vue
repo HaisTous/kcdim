@@ -7,7 +7,7 @@
             v-for="section in sections"
             :data-section="section.link"
             class="sidebar-nav__li">
-          <a :href="`#${section.link}`">{{ section.name }}</a>
+          <router-link :to="`#${section.link}`">{{ section.name }}</router-link>
         </li>
       </ul>
     </nav>

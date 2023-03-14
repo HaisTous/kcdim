@@ -1,5 +1,5 @@
 import Home from "@/pages/Home.vue";
-import {createRouter, createWebHistory} from "vue-router";
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import Topics from "@/pages/TopicsList.vue";
 import Students from "@/pages/Students.vue";
 import Events from "@/pages/Events.vue";
@@ -32,9 +32,17 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory('/'),
+    history: createWebHashHistory('/'),
     routes,
     scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                top: 72,
+                behavior: 'smooth'
+            }
+        }
+
         return {
             top: 0,
         }
